@@ -82,6 +82,24 @@ export function useSubgraphAuditor(params: {
     skip: !address || !contract || !areYouAuditor || !hasKey,
   });
 
+  const refresh = useMemo(() => {
+    return async () => {
+      // Re-check for key in localStorage before refetching
+      try {
+        if (address && contract) {
+          const stored = localStorage.getItem(`eerc:dk:${contract}:${address}`);
+          if (stored) {
+            if (!hasKey || stored !== keyString) {
+              setHasKey(true);
+              setKeyString(stored);
+            }
+          }
+        }
+      } catch {}
+      await refetch();
+    };
+  }, [address, contract, hasKey, keyString, refetch]);
+
   const items = useMemo(() => {
     if (!data) return [] as Array<any>;
     const out: Array<{
@@ -148,5 +166,5 @@ export function useSubgraphAuditor(params: {
     return out;
   }, [data, hasKey, keyString]);
 
-  return { items, loading, error, refetch, hasKey };
+  return { items, loading, error, refetch, refresh, hasKey };
 }

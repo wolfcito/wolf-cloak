@@ -474,7 +474,35 @@ export function EERC() {
           }
 
           generateDecryptionKey()
-            .then(() => {
+            .then((key) => {
+              // Persist key so subgraph-based auditor hook can decrypt amounts
+              try {
+                if (address) {
+                  // Store for current contract
+                  if (contractAddr) {
+                    localStorage.setItem(
+                      `eerc:dk:${contractAddr}:${address}`,
+                      key,
+                    );
+                  }
+                  // Also store for both known EERC contracts to keep modes in sync
+                  localStorage.setItem(
+                    `eerc:dk:${CONTRACTS.EERC_STANDALONE}:${address}`,
+                    key,
+                  );
+                  localStorage.setItem(
+                    `eerc:dk:${CONTRACTS.EERC_CONVERTER}:${address}`,
+                    key,
+                  );
+                }
+              } catch {}
+
+              // Try triggering auditor refresh if available
+              try {
+                // @ts-expect-error union hook may not expose refresh in all cases
+                auditorHook?.refresh?.();
+              } catch {}
+
               toast.success("🔑 Decryption key generated!", {
                 position: "top-right",
                 autoClose: 5000,
