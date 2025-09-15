@@ -4,12 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        "cloak-black": "#121212",
-        "cloak-dark": "#1E1E1E",
-        "cloak-blue": "#00D1FF",
-        "cloak-purple": "#A020F0",
-        "cloak-gray": "#D3D3D3",
-        "cloak-red": "#FF3131",
+        // Discord-inspired color palette
+        "discord-dark": "#2C2F33",      // Main dark background
+        "discord-darker": "#23272A",    // Darker background for panels
+        "discord-darkest": "#1E2124",   // Darkest background
+        "discord-sidebar": "#2F3136",   // Sidebar background
+        "discord-channel": "#36393F",   // Channel background
+        "discord-text": "#DCDDDE",      // Primary text color
+        "discord-text-muted": "#72767D", // Muted text color
+        "discord-accent": "#5865F2",    // Discord's signature purple/blue
+        "discord-red": "#ED4245",       // Discord red for notifications
+        "discord-green": "#3BA55C",     // Online status green
+        "discord-yellow": "#FAA61A",    // Warning/boost yellow
+        "discord-orange": "#FF6B35",    // Orange accent
+        "discord-purple": "#9C84EF",    // Purple accent
+        "discord-pink": "#F47B68",      // Pink accent
+        "discord-border": "#40444B",    // Border color
+        "discord-hover": "#40444B",     // Hover state
+        "discord-selected": "#393C43",  // Selected state
+        // Legacy colors for compatibility
+        "cloak-black": "#1E2124",
+        "cloak-dark": "#2C2F33",
+        "cloak-blue": "#5865F2",
+        "cloak-purple": "#9C84EF",
+        "cloak-gray": "#DCDDDE",
+        "cloak-red": "#ED4245",
       },
       fontFamily: {
         mono: ['"Anonymous Pro"', '"Roboto Mono"', "monospace"],

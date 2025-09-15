@@ -6,9 +6,30 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Discord-inspired color variables */
+  --discord-dark: #2C2F33;
+  --discord-darker: #23272A;
+  --discord-darkest: #1E2124;
+  --discord-sidebar: #2F3136;
+  --discord-channel: #36393F;
+  --discord-text: #DCDDDE;
+  --discord-text-muted: #72767D;
+  --discord-accent: #5865F2;
+  --discord-red: #ED4245;
+  --discord-green: #3BA55C;
+  --discord-yellow: #FAA61A;
+  --discord-orange: #FF6B35;
+  --discord-purple: #9C84EF;
+  --discord-pink: #F47B68;
+  --discord-border: #40444B;
+  --discord-hover: #40444B;
+  --discord-selected: #393C43;
+}
+
 body {
-  background-color: #121212;
-  color: #d3d3d3;
+  background-color: var(--discord-darkest);
+  color: var(--discord-text);
   font-family: "Open Sans", sans-serif;
 }
 
@@ -25,5 +46,6 @@ input[type="number"] {
 }
 
 .scrollable-text {
-  overflow: auto; /* Add a scrollbar when content overflows */
+  overflow: auto;
+  /* Add a scrollbar when content overflows */
 }

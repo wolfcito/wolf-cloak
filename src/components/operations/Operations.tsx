@@ -56,14 +56,14 @@ export function Operations({
 
 			{mode === "standalone" && (
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					<div className="border border-red-500/30 bg-black/10 rounded-lg p-4 flex flex-col min-h-[200px]">
+					<div className="border border-discord-border bg-discord-darker rounded-lg p-4 flex flex-col min-h-[200px]">
 						<Mint
 							handlePrivateMint={handlePrivateMint_}
 							isDecryptionKeySet={isDecryptionKeySet}
 						/>
 					</div>
 
-					<div className="border border-red-500/30 bg-black/10 rounded-lg p-4 flex flex-col min-h-[200px] ">
+					<div className="border border-discord-border bg-discord-darker rounded-lg p-4 flex flex-col min-h-[200px] ">
 						<Burn
 							handlePrivateBurn={handlePrivateBurn_}
 							isDecryptionKeySet={isDecryptionKeySet}
@@ -74,14 +74,14 @@ export function Operations({
 
 			{mode === "converter" && (
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-					<div className="border border-red-500/30 bg-black/10 rounded-lg p-4 flex flex-col min-h-[200px]">
+					<div className="border border-discord-border bg-discord-darker rounded-lg p-4 flex flex-col min-h-[200px]">
 						<Deposit
 							handlePrivateDeposit={handlePrivateDeposit_}
 							isDecryptionKeySet={isDecryptionKeySet}
 						/>
 					</div>
 
-					<div className="border border-red-500/30 bg-black/10 rounded-lg p-4 flex flex-col min-h-[200px] ">
+					<div className="border border-discord-border bg-discord-darker rounded-lg p-4 flex flex-col min-h-[200px] ">
 						<Withdraw
 							handlePrivateWithdraw={handlePrivateWithdraw_}
 							isDecryptionKeySet={isDecryptionKeySet}
@@ -90,7 +90,7 @@ export function Operations({
 				</div>
 			)}
 
-			<div className="border border-red-500/30 bg-black/10 rounded-lg p-4 flex flex-col min-h-[200px]">
+			<div className="border border-discord-border bg-discord-darker rounded-lg p-4 flex flex-col min-h-[200px]">
 				<Transfer
 					handlePrivateTransfer={handlePrivateTransfer_}
 					isDecryptionKeySet={isDecryptionKeySet}

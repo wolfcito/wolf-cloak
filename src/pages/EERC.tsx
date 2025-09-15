@@ -79,7 +79,7 @@ export function EERC() {
             href={`${EXPLORER_BASE_URL_TX}${transactionReceipt?.transactionHash}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-red-500 underline hover:text-red-500/80"
+            className="text-discord-accent underline hover:text-discord-accent/80"
           >
             See on Explorer →
           </a>
@@ -184,7 +184,7 @@ export function EERC() {
               href={`${EXPLORER_BASE_URL_TX}${txHash}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-red-500 underline hover:text-red-500/80"
+              className="text-discord-accent underline hover:text-discord-accent/80"
             >
               See transaction →
             </a>
@@ -368,51 +368,51 @@ export function EERC() {
 
   return (
     <main className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-cloak-gray font-mono text-sm leading-relaxed mt-4">
-        <h2 className="text-red-500 font-bold text-lg mb-2 text-center flex items-center justify-center gap-2">
+      <div className="text-discord-text font-mono text-sm leading-relaxed mt-4">
+        <h2 className="text-discord-accent font-bold text-lg mb-2 text-center flex items-center justify-center gap-2">
           wolf-cloak
         </h2>
       </div>
   
 
       {/* Contracts */}
-      <div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10">
-        <div className="text-red-500 font-bold mb-2">📜 Contracts - Avalanche Fuji Testnet</div>
+      <div className="border border-discord-border rounded-md p-4 font-mono text-sm bg-discord-darker">
+        <div className="text-discord-accent font-bold mb-2">📜 Contracts - Avalanche Fuji Testnet</div>
         <div className="grid grid-cols-[160px_1fr] gap-y-3 gap-x-4 items-center">
-          <div className="text-red-500">eERC Native</div>
-          <div className="text-red-500/80 break-all">
+          <div className="text-discord-accent">eERC Native</div>
+          <div className="text-discord-text-muted break-all">
             <div>{CONTRACTS.EERC_STANDALONE}</div>
             <a
               href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_STANDALONE}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-red-500/60 underline hover:text-red-500"
+              className="text-xs text-discord-text-muted underline hover:text-discord-accent"
             >
               See on Explorer →
             </a>
           </div>
 
-          <div className="text-red-500">eERC Wrapper</div>
-          <div className="text-red-500/80 break-all">
+          <div className="text-discord-accent">eERC Wrapper</div>
+          <div className="text-discord-text-muted break-all">
             <div>{CONTRACTS.EERC_CONVERTER}</div>
             <a
               href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_CONVERTER}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-red-500/60 underline hover:text-red-500"
+              className="text-xs text-discord-text-muted underline hover:text-discord-accent"
             >
               See on Explorer →
             </a>
           </div>
 
-          <div className="text-red-500">Test ERC-20</div>
-          <div className="text-red-500/80 break-all">
+          <div className="text-discord-accent">Test ERC-20</div>
+          <div className="text-discord-text-muted break-all">
             <div>{CONTRACTS.ERC20}</div>
             <a
               href={`${EXPLORER_BASE_URL}${CONTRACTS.ERC20}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs text-red-500/60 underline hover:text-red-500"
+              className="text-xs text-discord-text-muted underline hover:text-discord-accent"
             >
               See on Explorer →
             </a>
@@ -423,7 +423,7 @@ export function EERC() {
       <Divider title="🔗 Connect Wallet" />
       <button
         type="button"
-        className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono"
+        className="bg-discord-darker w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-discord-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-discord-hover transition-all duration-200 font-mono"
         disabled={isConnected}
         onClick={() => {
           if (isConnected) {
@@ -448,7 +448,7 @@ export function EERC() {
       {isConnected && (
         <button
           type="button"
-          className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono"
+          className="bg-discord-darker w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-discord-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-discord-hover transition-all duration-200 font-mono"
           disabled={!isConnected}
           onClick={async () => {
             if (!isConnected) {
@@ -465,7 +465,7 @@ export function EERC() {
       <Divider title="🔑 Generate Decryption Key" />
       <button
         type="button"
-        className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono"
+        className="bg-discord-darker w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-discord-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-discord-hover transition-all duration-200 font-mono"
         disabled={isDecryptionKeySet}
         onClick={async () => {
           if (!isConnected) {
@@ -520,7 +520,7 @@ export function EERC() {
             <div className="flex flex-col items-center gap-1">
               <span>Registering your wallet...</span>
               {txHash && (
-                <span className="text-xs text-cloak-gray">
+                <span className="text-xs text-discord-text-muted">
                   Transaction: {txHash.slice(0, 6)}...{txHash.slice(-4)}
                 </span>
               )}
@@ -535,24 +535,24 @@ export function EERC() {
 
       {/* Transaction Pending Indicator - Enhanced Version */}
       {isTransactionPending && (
-        <div className="border border-red-500/50 rounded-md p-4 font-mono text-sm mb-4">
+        <div className="border border-discord-border rounded-md p-4 font-mono text-sm mb-4 bg-discord-darker">
           <div className="flex flex-col items-center gap-2">
-            <div className="text-red-500 font-bold text-lg">
+            <div className="text-discord-accent font-bold text-lg">
               {transactionType} in progress...
             </div>
             {txHash && (
               <div className="flex flex-col items-center p-3 rounded-md w-full">
-                <span className="text-red-500 font-semibold mb-1">
+                <span className="text-discord-accent font-semibold mb-1">
                   Transaction Hash:
                 </span>
-                <span className="text-xs text-cloak-gray font-mono p-2 rounded w-full text-center break-all">
+                <span className="text-xs text-discord-text-muted font-mono p-2 rounded w-full text-center break-all">
                   {txHash}
                 </span>
                 <a
                   href={`${EXPLORER_BASE_URL_TX}${txHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-red-500 underline hover:text-red-500/80 mt-2 bg-red-500/10 px-3 py-1 rounded"
+                  className="text-xs text-discord-accent underline hover:text-discord-accent/80 mt-2 bg-discord-accent/10 px-3 py-1 rounded"
                 >
                   View on Explorer →
                 </a>
@@ -562,21 +562,21 @@ export function EERC() {
         </div>
       )}
 
-      <div className="flex items-center space-x-4 font-mono text-sm text-cloak-gray justify-center my-3">
+      <div className="flex items-center space-x-4 font-mono text-sm text-discord-text justify-center my-3">
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <span
           className={`cursor-pointer ${
-            mode === "standalone" ? "text-red-500 font-bold" : "opacity-50"
+            mode === "standalone" ? "text-discord-accent font-bold" : "opacity-50"
           }`}
           onClick={() => setMode("standalone")}
         >
           Standalone Mode
         </span>
-        <span className="text-red-500/40">|</span>
+        <span className="text-discord-text-muted">|</span>
         {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
         <span
           className={`cursor-pointer ${
-            mode === "converter" ? "text-red-500 font-bold" : "opacity-50"
+            mode === "converter" ? "text-discord-accent font-bold" : "opacity-50"
           }`}
           onClick={() => setMode("converter")}
         >
@@ -648,13 +648,13 @@ export function EERC() {
         explorerBaseTx={EXPLORER_BASE_URL_TX}
       />
 
-<p className="text-xs text-red-500/70 mt-0">
+        <p className="text-xs text-discord-text-muted mt-0">
           Want to learn more? See the full documentation on our{" "}
           <a
             href="https://docs.avacloud.io/encrypted-erc"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-red-500"
+            className="underline hover:text-discord-accent"
           >
             GitBook →
           </a>
