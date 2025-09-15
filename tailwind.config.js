@@ -4,31 +4,31 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Discord-inspired color palette
-        "discord-dark": "#2C2F33",      // Main dark background
-        "discord-darker": "#23272A",    // Darker background for panels
-        "discord-darkest": "#1E2124",   // Darkest background
-        "discord-sidebar": "#2F3136",   // Sidebar background
-        "discord-channel": "#36393F",   // Channel background
-        "discord-text": "#DCDDDE",      // Primary text color
-        "discord-text-muted": "#72767D", // Muted text color
-        "discord-accent": "#5865F2",    // Discord's signature purple/blue
-        "discord-red": "#ED4245",       // Discord red for notifications
-        "discord-green": "#3BA55C",     // Online status green
-        "discord-yellow": "#FAA61A",    // Warning/boost yellow
-        "discord-orange": "#FF6B35",    // Orange accent
-        "discord-purple": "#9C84EF",    // Purple accent
-        "discord-pink": "#F47B68",      // Pink accent
-        "discord-border": "#40444B",    // Border color
-        "discord-hover": "#40444B",     // Hover state
-        "discord-selected": "#393C43",  // Selected state
+        // Chess board inspired color palette
+        "chess-dark": "#2C303A",        // Main dark background (chess board blue)
+        "chess-darker": "#22252D",      // Darker background (chess board black)
+        "chess-darkest": "#1A1D23",     // Darkest background
+        "chess-sidebar": "#2A2E36",     // Sidebar background
+        "chess-panel": "#323640",       // Panel background
+        "chess-text": "#E8E9EA",        // Primary text color
+        "chess-text-muted": "#8A8D94",  // Muted text color
+        "chess-accent": "#4D94FF",      // Chess blue accent
+        "chess-red": "#FF4D4D",         // Chess red accent
+        "chess-green": "#4CAF50",       // Success green
+        "chess-yellow": "#FFC107",      // Warning yellow
+        "chess-orange": "#FF9800",      // Orange accent
+        "chess-purple": "#9C27B0",      // Purple accent
+        "chess-pink": "#E91E63",        // Pink accent
+        "chess-border": "#3A3E47",      // Border color
+        "chess-hover": "#3A3E47",       // Hover state
+        "chess-selected": "#404550",    // Selected state
         // Legacy colors for compatibility
-        "cloak-black": "#1E2124",
-        "cloak-dark": "#2C2F33",
-        "cloak-blue": "#5865F2",
-        "cloak-purple": "#9C84EF",
-        "cloak-gray": "#DCDDDE",
-        "cloak-red": "#ED4245",
+        "cloak-black": "#22252D",
+        "cloak-dark": "#2C303A",
+        "cloak-blue": "#4D94FF",
+        "cloak-purple": "#9C27B0",
+        "cloak-gray": "#E8E9EA",
+        "cloak-red": "#FF4D4D",
       },
       fontFamily: {
         mono: ['"Anonymous Pro"', '"Roboto Mono"', "monospace"],

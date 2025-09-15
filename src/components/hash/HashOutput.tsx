@@ -41,7 +41,7 @@ export function HashOutput({
 		<motion.div
 			initial={{ opacity: 0, y: 20 }}
 			animate={{ opacity: 1, y: 0 }}
-			className="bg-cloak-dark p-4 rounded-lg border border-red-500/20"
+			className="bg-cloak-dark p-4 rounded-lg border border-chess-border/20"
 		>
 			<div className="flex justify-between items-center mb-2">
 				<span className="text-cloak-gray font-mono">Result</span>
@@ -49,7 +49,7 @@ export function HashOutput({
 					<DisplayToggle mode={displayMode} onToggle={onToggleDisplay} />
 					<button
 						onClick={onCopy}
-						className="p-2 text-cloak-gray hover:text-discord-accent transition-colors"
+						className="p-2 text-cloak-gray hover:text-chess-accent transition-colors"
 						title="Copy to clipboard"
 						type="button"
 					>
@@ -57,7 +57,7 @@ export function HashOutput({
 					</button>
 				</div>
 			</div>
-			<div className="font-mono text-discord-accent break-all">
+			<div className="font-mono text-chess-accent break-all">
 				{renderHashOutput()}
 			</div>
 		</motion.div>

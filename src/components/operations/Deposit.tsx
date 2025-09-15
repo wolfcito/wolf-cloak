@@ -16,7 +16,7 @@ export function Deposit({
 	return (
 		<>
 			<div className="flex-1">
-				<h3 className="text-discord-accent font-bold mb-2">Deposit</h3>
+				<h3 className="text-chess-accent font-bold mb-2">Deposit</h3>
 			</div>
 
 			<div>
@@ -30,11 +30,11 @@ export function Deposit({
 						}
 					}}
 					placeholder={"Amount in ether (eg. 1.5, 0.01)"}
-					className="flex-1 bg-cloak-dark text-cloak-gray px-4 py-0.5 rounded-lg border border-red-500/20 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none font-mono w-full"
+					className="flex-1 bg-cloak-dark text-cloak-gray px-4 py-0.5 rounded-lg border border-chess-border/20 focus:border-chess-border focus:ring-1 focus:ring-chess-border outline-none font-mono w-full"
 				/>
 				<button
 					type="button"
-					className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
+					className="bg-cloak-dark w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-border/60 transition-all duration-200 font-mono mt-2"
 					onClick={async () => {
 						setLoading(true);
 						handlePrivateDeposit(depositAmount)

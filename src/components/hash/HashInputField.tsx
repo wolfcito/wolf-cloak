@@ -29,13 +29,13 @@ export function HashInputField({
 					}
 				}}
 				placeholder={"..."}
-				className="flex-1 bg-cloak-dark text-cloak-gray px-4 py-1 rounded-lg border border-red-500/20 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none font-mono"
+				className="flex-1 bg-cloak-dark text-cloak-gray px-4 py-1 rounded-lg border border-chess-border/20 focus:border-chess-border focus:ring-1 focus:ring-chess-border outline-none font-mono"
 			/>
 			{canRemove && (
 				<button
 					onClick={onRemove}
 					type="button"
-					className="px-4 bg-cloak-dark text-cloak-gray hover:text-discord-accent rounded-lg border border-red-500/20"
+					className="px-4 bg-cloak-dark text-cloak-gray hover:text-chess-accent rounded-lg border border-chess-border/20"
 					title="Remove input"
 				>
 					<FaTrash />

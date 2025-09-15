@@ -7,29 +7,29 @@
 @tailwind utilities;
 
 :root {
-  /* Discord-inspired color variables */
-  --discord-dark: #2C2F33;
-  --discord-darker: #23272A;
-  --discord-darkest: #1E2124;
-  --discord-sidebar: #2F3136;
-  --discord-channel: #36393F;
-  --discord-text: #DCDDDE;
-  --discord-text-muted: #72767D;
-  --discord-accent: #5865F2;
-  --discord-red: #ED4245;
-  --discord-green: #3BA55C;
-  --discord-yellow: #FAA61A;
-  --discord-orange: #FF6B35;
-  --discord-purple: #9C84EF;
-  --discord-pink: #F47B68;
-  --discord-border: #40444B;
-  --discord-hover: #40444B;
-  --discord-selected: #393C43;
+  /* Chess board inspired color variables */
+  --chess-dark: #2C303A;
+  --chess-darker: #22252D;
+  --chess-darkest: #1A1D23;
+  --chess-sidebar: #2A2E36;
+  --chess-panel: #323640;
+  --chess-text: #E8E9EA;
+  --chess-text-muted: #8A8D94;
+  --chess-accent: #4D94FF;
+  --chess-red: #FF4D4D;
+  --chess-green: #4CAF50;
+  --chess-yellow: #FFC107;
+  --chess-orange: #FF9800;
+  --chess-purple: #9C27B0;
+  --chess-pink: #E91E63;
+  --chess-border: #3A3E47;
+  --chess-hover: #3A3E47;
+  --chess-selected: #404550;
 }
 
 body {
-  background-color: var(--discord-darkest);
-  color: var(--discord-text);
+  background-color: var(--chess-darkest);
+  color: var(--chess-text);
   font-family: "Open Sans", sans-serif;
 }
 

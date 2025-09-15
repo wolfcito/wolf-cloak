@@ -20,7 +20,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       pauseOnHover={false}
       theme="dark"
       transition={Bounce}
-      toastClassName={"font-mono border-red-500/60"}
+      toastClassName={"font-mono border-chess-border/60"}
     />
     <Analytics />
   </AppKitProvider>

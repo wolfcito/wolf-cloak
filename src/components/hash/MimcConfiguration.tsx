@@ -11,7 +11,7 @@ export const MimcConfiguration = ({
 }: MimcConfigurationProps) => {
 	return (
 		<div className="flex flex-col space-y-2">
-			<p className="text-discord-accent font-mono text-lg text-center my-1">
+			<p className="text-chess-accent font-mono text-lg text-center my-1">
 				MiMC Configuration
 			</p>
 			<div className="flex space-x-4 justify-center">
@@ -19,7 +19,7 @@ export const MimcConfiguration = ({
 				<div className="flex flex-col">
 					<label
 						htmlFor="rounds"
-						className="text-discord-accent font-mono text-sm"
+						className="text-chess-accent font-mono text-sm"
 					>
 						Rounds
 					</label>
@@ -29,7 +29,7 @@ export const MimcConfiguration = ({
 						disabled
 						value={mimcParams.rounds.toString()}
 						placeholder={"..."}
-						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-red-500/20 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none font-mono"
+						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-chess-border/20 focus:border-chess-border focus:ring-1 focus:ring-chess-border outline-none font-mono"
 					/>
 				</div>
 
@@ -37,7 +37,7 @@ export const MimcConfiguration = ({
 				<div className="flex flex-col">
 					<label
 						htmlFor="nbOutputs"
-						className="text-discord-accent font-mono text-sm"
+						className="text-chess-accent font-mono text-sm"
 					>
 						Number of outputs
 					</label>
@@ -54,13 +54,13 @@ export const MimcConfiguration = ({
 							}
 						}}
 						placeholder={"..."}
-						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-red-500/20 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none font-mono"
+						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-chess-border/20 focus:border-chess-border focus:ring-1 focus:ring-chess-border outline-none font-mono"
 					/>
 				</div>
 
 				{/* Key */}
 				<div className="flex flex-col">
-					<label htmlFor="key" className="text-discord-accent font-mono text-sm">
+					<label htmlFor="key" className="text-chess-accent font-mono text-sm">
 						Key
 					</label>
 					<input
@@ -76,7 +76,7 @@ export const MimcConfiguration = ({
 							}
 						}}
 						placeholder={"..."}
-						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-red-500/20 focus:border-red-500 focus:ring-1 focus:ring-red-500 outline-none font-mono"
+						className="flex-1 bg-cloak-dark text-cloak-gray p-2.5 rounded-lg border border-chess-border/20 focus:border-chess-border focus:ring-1 focus:ring-chess-border outline-none font-mono"
 					/>
 				</div>
 			</div>

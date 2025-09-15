@@ -21,11 +21,11 @@ export function Transactions({
   pending?: boolean;
 }) {
   return (
-    <div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10 mt-4">
+    <div className="border border-chess-border/30 rounded-md p-4 font-mono text-sm bg-black/10 mt-4">
       <div className="flex justify-between items-center mb-2">
-        <div className="text-discord-accent font-bold">Transactions</div>
+        <div className="text-chess-accent font-bold">Transactions</div>
         <button
-          className="bg-cloak-dark text-discord-accent px-2 py-1 rounded border border-red-500/60 hover:bg-red-500/60 transition-all duration-200"
+          className="bg-cloak-dark text-chess-accent px-2 py-1 rounded border border-chess-border/60 hover:bg-chess-border/60 transition-all duration-200"
           onClick={onRefresh}
           disabled={pending}
         >
@@ -39,28 +39,28 @@ export function Transactions({
           {items.slice(0, 50).map((tx) => (
             <div
               key={tx.hash}
-              className="grid grid-cols-[140px_1fr] gap-x-3 items-center border-b border-red-500/10 pb-2"
+              className="grid grid-cols-[140px_1fr] gap-x-3 items-center border-b border-chess-border/10 pb-2"
             >
-              <div className="text-discord-accent/80">
+              <div className="text-chess-accent/80">
                 {tx.timestamp
                   ? new Date(tx.timestamp * 1000).toLocaleString()
                   : `#${tx.blockNumber.toString()}`}
               </div>
               <div className="text-cloak-gray break-all">
-                <span className="text-discord-accent">{tx.type}</span>
+                <span className="text-chess-accent">{tx.type}</span>
                 {tx.from && (
                   <>
-                    {" "}from <span className="text-discord-accent/80">{tx.from}</span>
+                    {" "}from <span className="text-chess-accent/80">{tx.from}</span>
                   </>
                 )}
                 {tx.to && (
                   <>
-                    {" "}to <span className="text-discord-accent/80">{tx.to}</span>
+                    {" "}to <span className="text-chess-accent/80">{tx.to}</span>
                   </>
                 )}
                 {tx.amount && (
                   <>
-                    {" "}amount <span className="text-discord-accent/80">{tx.amount}</span>
+                    {" "}amount <span className="text-chess-accent/80">{tx.amount}</span>
                   </>
                 )}
                 {tx.tokenId !== undefined && (
@@ -69,7 +69,7 @@ export function Transactions({
                     {tx.dust && tx.dust !== 0n ? `, dust ${tx.dust.toString()}` : ""})
                   </>
                 )}
-                <div className="text-xs text-discord-accent/60">{tx.hash}</div>
+                <div className="text-xs text-chess-accent/60">{tx.hash}</div>
               </div>
             </div>
           ))}

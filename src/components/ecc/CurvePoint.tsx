@@ -45,9 +45,9 @@ export function CurvePoint({
 	const styles = useMemo(() => {
 		if (isOnCurve)
 			return {
-				boxStyle: "border-red-500/30 hover:border-red-500/30",
-				pinColor: "text-discord-accent/60",
-				textStyle: "text-discord-accent/60",
+				boxStyle: "border-chess-border/30 hover:border-chess-border/30",
+				pinColor: "text-chess-accent/60",
+				textStyle: "text-chess-accent/60",
 			};
 		return {
 			boxStyle: "border-cloak-red/30 hover:border-cloak-red/30",

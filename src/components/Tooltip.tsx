@@ -16,7 +16,7 @@ export const RightTooltip = ({ content, id, children }: RightTooltipProps) => {
 			<Tooltip
 				id={id}
 				place="right"
-				className="!bg-black !text-discord-accent !text-xs !font-mono !px-3 !py-1 !z-50"
+				className="!bg-black !text-chess-accent !text-xs !font-mono !px-3 !py-1 !z-50"
 				opacity={95}
 				offset={8}
 			/>

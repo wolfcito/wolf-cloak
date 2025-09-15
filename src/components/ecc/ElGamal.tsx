@@ -102,8 +102,8 @@ export const ElGamal = () => {
 	return (
 		<>
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-10 mb-2">
-				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
-					<FaLock className="text-discord-accent" />
+				<h2 className="text-chess-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
+					<FaLock className="text-chess-accent" />
 					ElGamal Encryption on BabyJubjub
 				</h2>
 				<div className="space-y-4">
@@ -116,8 +116,8 @@ export const ElGamal = () => {
 						texts together, and the decrypted result will be the sum of the
 						original messages thanks to the homomorphic properties of the curve.
 					</p>
-					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-						<h3 className="text-discord-accent font-semibold mb-2">
+					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20">
+						<h3 className="text-chess-accent font-semibold mb-2">
 							How it works:
 						</h3>
 						<ol className="list-decimal pl-6 space-y-2 text-sm">
@@ -130,10 +130,10 @@ export const ElGamal = () => {
 			</div>
 
 			<Divider title="🔐 Key Generation" />
-			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-4">
+			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20 mb-4">
 				<div className="flex items-center justify-between mb-4">
-					<h3 className="text-discord-accent font-semibold flex items-center gap-2">
-						<FaKey className="text-discord-accent" />
+					<h3 className="text-chess-accent font-semibold flex items-center gap-2">
+						<FaKey className="text-chess-accent" />
 						Key Pair
 					</h3>
 				</div>
@@ -144,9 +144,9 @@ export const ElGamal = () => {
 			</div>
 
 			<Divider title="📦 Encryption" />
-			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-4">
-				<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
-					<FaLock className="text-discord-accent" />
+			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20 mb-4">
+				<h3 className="text-chess-accent font-semibold mb-4 flex items-center gap-2">
+					<FaLock className="text-chess-accent" />
 					Encrypt Message
 				</h3>
 				<Encryption
@@ -161,9 +161,9 @@ export const ElGamal = () => {
 			</div>
 
 			<Divider title="🔑 Decryption" />
-			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-				<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
-					<FaUnlock className="text-discord-accent" />
+			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20">
+				<h3 className="text-chess-accent font-semibold mb-4 flex items-center gap-2">
+					<FaUnlock className="text-chess-accent" />
 					Decrypt Message
 				</h3>
 				<Decryption

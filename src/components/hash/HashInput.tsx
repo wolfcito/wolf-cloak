@@ -52,7 +52,7 @@ export function HashInput({
 				<div className="flex space-x-4">
 					<button
 						onClick={onAddInput}
-						className="px-4 bg-cloak-dark text-cloak-gray hover:text-discord-accent border border-red-500/20 rounded-lg font-mono transition-colors duration-200 flex items-center space-x-2"
+						className="px-4 bg-cloak-dark text-cloak-gray hover:text-chess-accent border border-chess-border/20 rounded-lg font-mono transition-colors duration-200 flex items-center space-x-2"
 						type="button"
 					>
 						<FaPlus size={12} />
@@ -62,7 +62,7 @@ export function HashInput({
 					<select
 						value={selectedFunction}
 						onChange={(e) => onFunctionChange(e.target.value as HashFunction)}
-						className="bg-cloak-dark text-cloak-gray px-4 py-2 rounded-lg border border-red-500/20 focus:outline-none font-mono"
+						className="bg-cloak-dark text-cloak-gray px-4 py-2 rounded-lg border border-chess-border/20 focus:outline-none font-mono"
 					>
 						<option value="poseidon">Poseidon</option>
 						<option value="mimcSponge">MiMC Sponge</option>

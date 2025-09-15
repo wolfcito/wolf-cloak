@@ -60,8 +60,8 @@ export function ECC() {
 	return (
 		<main className="max-w-6xl mx-auto px-4 py-8">
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-4 mb-6">
-				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
-					<FaCalculator className="text-discord-accent" />
+				<h2 className="text-chess-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
+					<FaCalculator className="text-chess-accent" />
 					ECC (BabyJubjub)
 				</h2>
 				<div className="space-y-4">
@@ -72,8 +72,8 @@ export function ECC() {
 						modulus and designed to ensure computational efficiency, making it a
 						preferred choice for privacy-preserving applications.
 					</p>
-					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-						<h3 className="text-discord-accent font-semibold mb-2">
+					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20">
+						<h3 className="text-chess-accent font-semibold mb-2">
 							Why BabyJubjub?
 						</h3>
 						<ul className="list-disc pl-6 space-y-2 text-sm">
@@ -86,7 +86,7 @@ export function ECC() {
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-1 gap-4">
-				<div className="bg-cloak-dark py-4 px-6 rounded-lg border border-red-500/20">
+				<div className="bg-cloak-dark py-4 px-6 rounded-lg border border-chess-border/20">
 					<div className="space-y-4">
 						<div>
 							<h3 className="text-cloak-gray mb-2 text-sm font-mono flex items-center gap-2">
@@ -95,7 +95,7 @@ export function ECC() {
 									content="The mathematical equation that defines the BabyJubjub curve"
 									id="curve-equation-tooltip"
 								>
-									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
+									<FaInfoCircle className="text-chess-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -113,7 +113,7 @@ export function ECC() {
 									content="The finite field over which the curve is defined"
 									id="prime-field-tooltip"
 								>
-									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
+									<FaInfoCircle className="text-chess-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -131,7 +131,7 @@ export function ECC() {
 									content="Base point used for public key generation and cryptographic operations"
 									id="generator-point-tooltip"
 								>
-									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
+									<FaInfoCircle className="text-chess-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -151,7 +151,7 @@ export function ECC() {
 									content="Alternative base point used for specific operations"
 									id="base8-point-tooltip"
 								>
-									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
+									<FaInfoCircle className="text-chess-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -168,9 +168,9 @@ export function ECC() {
 			</div>
 
 			<div className="mt-6">
-				<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-6">
-					<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
-						<FaPlay className="text-discord-accent" />
+				<div className="bg-cloak-dark/30 p-4 rounded-lg border border-chess-border/20 mb-6">
+					<h3 className="text-chess-accent font-semibold mb-4 flex items-center gap-2">
+						<FaPlay className="text-chess-accent" />
 						Point Playground
 					</h3>
 					<p className="text-sm text-cloak-gray mb-4">
@@ -185,21 +185,21 @@ export function ECC() {
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.identity, "p1")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Identity
 								</button>
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.generator, "p1")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Generator
 								</button>
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.base8, "p1")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Base8
 								</button>
@@ -213,28 +213,28 @@ export function ECC() {
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.identity, "p2")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Identity
 								</button>
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.generator, "p2")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Generator
 								</button>
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.base8, "p2")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60"
 								>
 									Base8
 								</button>
 								<button
 									type="button"
 									onClick={() => setPresetPoint(PRESET_POINTS.random(), "p2")}
-									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-red-500/30 hover:border-red-500/60 flex items-center gap-1"
+									className="text-xs bg-cloak-dark px-2 py-1 rounded border border-chess-border/30 hover:border-chess-border/60 flex items-center gap-1"
 								>
 									<FaRandom className="text-xs" />
 									Random
@@ -254,14 +254,14 @@ export function ECC() {
 							content="Compresses a point into a single value for efficient storage"
 							id="point-compression-tooltip"
 						>
-							<FaInfoCircle className="text-discord-accent/60 cursor-help" />
+							<FaInfoCircle className="text-chess-accent/60 cursor-help" />
 						</RightTooltip>
 					</p>
 
 					<div className="group relative flex-1">
-						<div className="flex items-center space-x-4 bg-cloak-dark/50 px-4 py-3 rounded-lg border border-red-500/30 hover:border-red-500/30 transition-all">
+						<div className="flex items-center space-x-4 bg-cloak-dark/50 px-4 py-3 rounded-lg border border-chess-border/30 hover:border-chess-border/30 transition-all">
 							<div className="flex-shrink-0 w-12 h-12 flex items-center justify-center flex-col">
-								<FaMapPin className="w-6 h-6 self-center text-discord-accent/60" />
+								<FaMapPin className="w-6 h-6 self-center text-chess-accent/60" />
 								<div className="text-xs text-center mt-1 text-cloak-gray font-mono">
 									Packed
 								</div>
@@ -269,7 +269,7 @@ export function ECC() {
 
 							<div className="font-mono">
 								<div className="text-sm">
-									<span className="text-discord-accent/60">
+									<span className="text-chess-accent/60">
 										{packed === 0n ? "0" : packed.toString(16)}
 									</span>
 								</div>

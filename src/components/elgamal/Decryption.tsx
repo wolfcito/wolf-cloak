@@ -19,7 +19,7 @@ export const Decryption = ({
 }: DecryptionProps) => {
 	return (
 		<div className="font-mono">
-			<div className="border border-red-500/40 p-4 rounded bg-black/20">
+			<div className="border border-chess-border/40 p-4 rounded bg-black/20">
 				<h3 className="font-bold mb-2">🔑 Strategy</h3>
 				<p>
 					Using the private key <code>x</code>, recover the original message
@@ -34,7 +34,7 @@ export const Decryption = ({
 				onClick={handleDecrypt}
 				type="button"
 				disabled={!canDecrypt}
-				className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200"
+				className="bg-cloak-dark w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-border/60 transition-all duration-200"
 			>
 				Decrypt
 			</button>
@@ -66,7 +66,7 @@ export const Decryption = ({
 						<div
 							className={`text-xs p-3 rounded-md font-mono mt-2 ${
 								packedOriginal === packedDecrypted
-									? "bg-red-500/5 border border-red-500/40 text-discord-accent"
+									? "bg-chess-border/5 border border-chess-border/40 text-chess-accent"
 									: "bg-cloak-red/5 border border-cloak-red/40 text-cloak-red"
 							}`}
 						>

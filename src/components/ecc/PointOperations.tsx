@@ -107,7 +107,7 @@ export const PointOperations: React.FC<PointOperationsProps> = ({ p1, p2 }) => {
 						if (/^\d*$/.test(value)) setScalar(value);
 					}}
 					placeholder={"Scalar"}
-					className="flex-0.5 bg-cloak-dark/50 text-cloak-gray p-2.5 rounded-lg border border-red-500/20 outline-none font-mono text-center text-lg"
+					className="flex-0.5 bg-cloak-dark/50 text-cloak-gray p-2.5 rounded-lg border border-chess-border/20 outline-none font-mono text-center text-lg"
 				/>
 				<CurvePoint
 					x={scalarMulResult.x}

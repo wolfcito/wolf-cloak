@@ -60,7 +60,7 @@ export function Hashes() {
 	return (
 		<main className="max-w-4xl mx-auto px-4 py-8">
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-4 mb-6">
-				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center">
+				<h2 className="text-chess-accent font-bold text-lg mb-4 text-center">
 					Cryptographic Hash Functions
 				</h2>
 				<p className="text-justify indent-6">
@@ -87,7 +87,7 @@ export function Hashes() {
 					</li>
 				</ul>
 
-				<h3 className="text-discord-accent font-bold text-md mt-6">
+				<h3 className="text-chess-accent font-bold text-md mt-6">
 					Hash Functions in Zero-Knowledge Proofs
 				</h3>
 				<p className="text-justify indent-6">
@@ -118,11 +118,11 @@ export function Hashes() {
 					same hash you shared earlier.
 				</p>
 
-				<h3 className="text-discord-accent font-bold text-md mt-2">
+				<h3 className="text-chess-accent font-bold text-md mt-2">
 					Poseidon Hash
 				</h3>
 				<p className="text-justify indent-6">
-					<strong className="text-discord-accent">Poseidon</strong> is a modern
+					<strong className="text-chess-accent">Poseidon</strong> is a modern
 					hash function specifically designed for zero-knowledge applications.
 					Unlike traditional hash functions like SHA-256, Poseidon is optimized
 					to work efficiently within zero-knowledge proof systems. This makes
@@ -134,9 +134,9 @@ export function Hashes() {
 					<li>Ideal for building privacy-preserving systems</li>
 				</ul>
 
-				<h3 className="text-discord-accent font-bold text-md mt-2">MiMC Sponge</h3>
+				<h3 className="text-chess-accent font-bold text-md mt-2">MiMC Sponge</h3>
 				<p className="text-justify indent-6">
-					<strong className="text-discord-accent">MiMC Sponge</strong> is another
+					<strong className="text-chess-accent">MiMC Sponge</strong> is another
 					zero-knowledge friendly hash function. While Poseidon generally offers
 					better performance, MiMC remains important in certain specialized
 					applications. Both functions are widely used in:
