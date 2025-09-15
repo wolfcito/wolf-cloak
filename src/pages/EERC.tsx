@@ -107,11 +107,11 @@ export function EERC() {
 
   const publicClient = usePublicClient({ chainId: avalancheFuji.id });
   const { data: walletClient } = useWalletClient();
-  const [txBound, setTxBound] = useState<number>(5000);
 
   // use eerc
   const {
     owner,
+    name,
     symbol,
     isAuditorKeySet,
     auditorPublicKey,
@@ -363,7 +363,19 @@ export function EERC() {
         address: address as `0x${string}` | undefined,
         mode,
         areYouAuditor,
-        auditorDecrypt,
+        auditorDecrypt: auditorDecrypt
+          ? (async () => {
+              const arr = await auditorDecrypt();
+              return arr.map((m) => ({
+                transactionHash: m.transactionHash,
+                amount: m.amount,
+                sender: m.sender,
+                // Ensure receiver is a string address for typing; hook only uses amount
+                receiver: (m.receiver ?? "0x0000000000000000000000000000000000000000") as `0x${string}`,
+                type: m.type,
+              }));
+            })
+          : undefined,
       });
 
   return (
@@ -499,8 +511,8 @@ export function EERC() {
 
               // Try triggering auditor refresh if available
               try {
-                // @ts-expect-error union hook may not expose refresh in all cases
-                auditorHook?.refresh?.();
+                // Call if present in the active hook
+                (auditorHook as any)?.refresh?.();
               } catch {}
 
               toast.success("🔑 Decryption key generated!", {
@@ -623,6 +635,7 @@ export function EERC() {
           publicKey={publicKey}
           owner={owner}
           decimals={Number(decimals)}
+          name={name}
           symbol={symbol}
           isAuditorKeySet={isAuditorKeySet}
           auditorPublicKey={auditorPublicKey}

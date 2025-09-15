@@ -44,19 +44,19 @@ export function PoseidonEncrypt() {
 			}
 
 			// Parse and validate numbers
-			const numbers = inputs
-				.split(",")
-				.map((num) => {
-					const trimmed = num.trim();
-					if (!trimmed) return null;
+            const numbers = inputs
+                .split(",")
+                .map((num) => {
+                  const trimmed = num.trim();
+                  if (!trimmed) return null;
 
 					try {
 						return BigInt(trimmed);
 					} catch (e) {
 						throw new Error(`Invalid number: ${trimmed}`);
 					}
-				})
-				.filter((num) => num !== null);
+                })
+                .filter((num): num is bigint => num !== null);
 
 			if (numbers.length === 0) {
 				throw new Error("Please enter at least one valid number");
@@ -81,7 +81,7 @@ export function PoseidonEncrypt() {
 				y: _authKey[1],
 			});
 
-			const encrypted = poseidonEncrypt(numbers, _encryptionKey, _nonce);
+            const encrypted = poseidonEncrypt(numbers as bigint[], _encryptionKey, _nonce);
 
 			setCiphertext(encrypted);
 		} catch (err) {

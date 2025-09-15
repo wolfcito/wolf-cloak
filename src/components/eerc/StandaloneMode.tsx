@@ -14,6 +14,7 @@ interface StandaloneModeProps {
 	publicKey: bigint[];
 	owner: string;
 	decimals: number;
+	name?: string;
 	symbol: string;
 	isAuditorKeySet: boolean;
 	auditorPublicKey: bigint[];
@@ -34,6 +35,7 @@ export function StandaloneMode({
 	publicKey,
 	owner,
 	decimals,
+	name,
 	symbol,
 	isAuditorKeySet,
 	auditorPublicKey,
@@ -45,6 +47,7 @@ export function StandaloneMode({
 	canSetAuditor,
 }: StandaloneModeProps) {
 	const [auditorAddress, setAuditorAddress] = useState<string>("");
+	const debugEnabled = import.meta.env.VITE_DEBUG_UI === "true";
 	return (
 		<>
 			<div className="border border-chess-border/30 rounded-md p-4 font-mono text-sm bg-black/10">
@@ -128,6 +131,50 @@ export function StandaloneMode({
 					</div>
 				</div>
 			</div>
+
+			{/* Details / Debug section to surface unused props */}
+			{debugEnabled && (
+				<div className="border border-chess-border/30 rounded-md p-4 font-mono text-xs bg-black/10 mt-2">
+					<div className="flex items-center justify-between">
+						<div className="text-chess-accent">Details</div>
+						<button
+							className="bg-cloak-dark text-chess-accent px-2 py-1 rounded border border-chess-border/60 hover:bg-chess-border/60 transition-all duration-200"
+							onClick={() => setShowEncryptedDetails(!showEncryptedDetails)}
+							type="button"
+						>
+							{showEncryptedDetails ? "Hide" : "Show"}
+						</button>
+					</div>
+					{showEncryptedDetails && (
+						<div className="mt-2 space-y-2 text-chess-accent/80 break-all">
+							<div>Encrypted Balance (len): {encryptedBalance?.length ?? 0}</div>
+							<div>Encrypted Balance (raw): {JSON.stringify(encryptedBalance)}</div>
+							<div className="flex gap-4 items-start">
+								<div>
+									<div className="text-chess-accent">Auditor Key (point)</div>
+									<CurvePoint
+										x={(auditorPublicKey?.[0] ?? 0n) as bigint}
+										y={(auditorPublicKey?.[1] ?? 0n) as bigint}
+										onChange={() => {}}
+										shouldCollapse
+										isCentered
+									/>
+								</div>
+								<div>
+									<div className="text-chess-accent">User Key (point)</div>
+									<CurvePoint
+										x={(publicKey?.[0] ?? 0n) as bigint}
+										y={(publicKey?.[1] ?? 0n) as bigint}
+										onChange={() => {}}
+										shouldCollapse
+										isCentered
+									/>
+								</div>
+							</div>
+						</div>
+					)}
+				</div>
+			)}
 
 			<Operations
 				handlePrivateMint={handlePrivateMint}

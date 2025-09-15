@@ -15,6 +15,10 @@ export const CIRCUIT_CONFIG = {
 		wasm: "/MintCircuit.wasm",
 		zkey: "/MintCircuit.groth16.zkey",
 	},
+	burn: {
+		wasm: "/BurnCircuit.wasm",
+		zkey: "/BurnCircuit.groth16.zkey",
+	},
 	transfer: {
 		wasm: "/TransferCircuit.wasm",
 		zkey: "/TransferCircuit.groth16.zkey",

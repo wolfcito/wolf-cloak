@@ -19,7 +19,7 @@ export function useAuditorPanel(params: {
   contract: `0x${string}`;
   address?: `0x${string}`;
 }) {
-  const { areYouAuditor, isDecryptionKeySet, generateDecryptionKey, auditorDecrypt, client, contract, address } = params;
+  const { areYouAuditor, generateDecryptionKey, auditorDecrypt, client, contract, address } = params;
 
   const [items, setItems] = useState<AuditorTx[]>([]);
   const [loading, setLoading] = useState(false);
@@ -138,7 +138,6 @@ export function useAuditorPanel(params: {
           address: contract,
           fromBlock,
           toBlock: current,
-          // @ts-expect-error viem accepts event objects shaped like this
           event: ev,
           args: { auditorAddress: address },
         } as any);
