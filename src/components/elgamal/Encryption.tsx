@@ -87,7 +87,7 @@ export const Encryption = ({
 				</div>
 			)}
 
-			<div className="w-full flex flex-row justify-between text-sm text-red-500/50 px-1">
+			<div className="w-full flex flex-row justify-between text-sm text-discord-accent/50 px-1">
 				<p>Message to encrypt:</p>
 				<p>Corresponding point on the curve (mG):</p>
 			</div>
@@ -118,11 +118,11 @@ export const Encryption = ({
 				type="button"
 				onClick={handleEncrypt}
 				disabled={!message || message.length === 0 || !scalarMulResult}
-				className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200"
+				className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200"
 			>
 				Encrypt
 			</button>
-			<p className="text-sm text-red-500/70 mb-2 px-1">
+			<p className="text-sm text-discord-accent/70 mb-2 px-1">
 				Ciphertext (C1, C2) = (rG, mG + rP)
 			</p>
 			<div className="flex flex-col gap-2">

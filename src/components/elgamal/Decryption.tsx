@@ -34,7 +34,7 @@ export const Decryption = ({
 				onClick={handleDecrypt}
 				type="button"
 				disabled={!canDecrypt}
-				className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200"
+				className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 mt-4 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200"
 			>
 				Decrypt
 			</button>
@@ -66,7 +66,7 @@ export const Decryption = ({
 						<div
 							className={`text-xs p-3 rounded-md font-mono mt-2 ${
 								packedOriginal === packedDecrypted
-									? "bg-red-500/5 border border-red-500/40 text-red-500"
+									? "bg-red-500/5 border border-red-500/40 text-discord-accent"
 									: "bg-cloak-red/5 border border-cloak-red/40 text-cloak-red"
 							}`}
 						>

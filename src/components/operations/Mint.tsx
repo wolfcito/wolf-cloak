@@ -15,7 +15,7 @@ export function Mint({ handlePrivateMint, isDecryptionKeySet }: MintProps) {
 	return (
 		<>
 			<div className="flex-1">
-				<h3 className="text-red-500 font-bold mb-2">Private Mint</h3>
+				<h3 className="text-discord-accent font-bold mb-2">Private Mint</h3>
 			</div>
 
 			<div>
@@ -33,7 +33,7 @@ export function Mint({ handlePrivateMint, isDecryptionKeySet }: MintProps) {
 				/>
 				<button
 					type="button"
-					className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
+					className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
 					onClick={async () => {
 						setLoading(true);
 						const formattedAmount = formatAmount(mintAmount);

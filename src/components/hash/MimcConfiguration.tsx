@@ -11,7 +11,7 @@ export const MimcConfiguration = ({
 }: MimcConfigurationProps) => {
 	return (
 		<div className="flex flex-col space-y-2">
-			<p className="text-red-500 font-mono text-lg text-center my-1">
+			<p className="text-discord-accent font-mono text-lg text-center my-1">
 				MiMC Configuration
 			</p>
 			<div className="flex space-x-4 justify-center">
@@ -19,7 +19,7 @@ export const MimcConfiguration = ({
 				<div className="flex flex-col">
 					<label
 						htmlFor="rounds"
-						className="text-red-500 font-mono text-sm"
+						className="text-discord-accent font-mono text-sm"
 					>
 						Rounds
 					</label>
@@ -37,7 +37,7 @@ export const MimcConfiguration = ({
 				<div className="flex flex-col">
 					<label
 						htmlFor="nbOutputs"
-						className="text-red-500 font-mono text-sm"
+						className="text-discord-accent font-mono text-sm"
 					>
 						Number of outputs
 					</label>
@@ -60,7 +60,7 @@ export const MimcConfiguration = ({
 
 				{/* Key */}
 				<div className="flex flex-col">
-					<label htmlFor="key" className="text-red-500 font-mono text-sm">
+					<label htmlFor="key" className="text-discord-accent font-mono text-sm">
 						Key
 					</label>
 					<input

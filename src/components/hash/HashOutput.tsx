@@ -49,7 +49,7 @@ export function HashOutput({
 					<DisplayToggle mode={displayMode} onToggle={onToggleDisplay} />
 					<button
 						onClick={onCopy}
-						className="p-2 text-cloak-gray hover:text-red-500 transition-colors"
+						className="p-2 text-cloak-gray hover:text-discord-accent transition-colors"
 						title="Copy to clipboard"
 						type="button"
 					>
@@ -57,7 +57,7 @@ export function HashOutput({
 					</button>
 				</div>
 			</div>
-			<div className="font-mono text-red-500 break-all">
+			<div className="font-mono text-discord-accent break-all">
 				{renderHashOutput()}
 			</div>
 		</motion.div>

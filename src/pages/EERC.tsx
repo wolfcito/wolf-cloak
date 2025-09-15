@@ -528,7 +528,7 @@ export function EERC() {
       <div>
         <button
           type="button"
-          className="mt-2 bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono"
+          className="mt-2 bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono"
           disabled={isRegistered || isRegistering || !isDecryptionKeySet}
           onClick={async () => {
             setIsRegistering(true);

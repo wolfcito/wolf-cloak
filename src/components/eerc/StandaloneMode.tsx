@@ -49,42 +49,42 @@ export function StandaloneMode({
 		<>
 			<div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10">
 				<div className="grid grid-cols-[220px_1fr] gap-y-2 gap-x-2 items-center">
-					<div className="text-red-500">Contract Address</div>
-					<div className="text-red-500/80 break-all">
+					<div className="text-discord-accent">Contract Address</div>
+					<div className="text-discord-accent/80 break-all">
 						{CONTRACTS.EERC_STANDALONE}
 					</div>
 
-					<div className="text-red-500">Owner</div>
-					<div className="text-red-500/80 break-all">{owner ?? "N/A"}</div>
+					<div className="text-discord-accent">Owner</div>
+					<div className="text-discord-accent/80 break-all">{owner ?? "N/A"}</div>
 
-					<div className="text-red-500">Mode</div>
-					<div className="text-red-500/80 break-all">Standalone</div>
+					<div className="text-discord-accent">Mode</div>
+					<div className="text-discord-accent/80 break-all">Standalone</div>
 
-					<div className="text-red-500">Decimals</div>
-					<div className="text-red-500/80 break-all">
+					<div className="text-discord-accent">Decimals</div>
+					<div className="text-discord-accent/80 break-all">
 						{decimals?.toString()}
 					</div>
 
-					<div className="text-red-500">Token Name</div>
-					<div className="text-red-500/80 break-all">{name ?? "N/A"}</div>
+					<div className="text-discord-accent">Token Name</div>
+					<div className="text-discord-accent/80 break-all">{name ?? "N/A"}</div>
 
-					<div className="text-red-500">Token Symbol</div>
-					<div className="text-red-500/80 break-all">{symbol ?? "N/A"}</div>
+					<div className="text-discord-accent">Token Symbol</div>
+					<div className="text-discord-accent/80 break-all">{symbol ?? "N/A"}</div>
 
-					<div className="text-red-500">Is Auditor Key Set</div>
-					<div className="text-red-500/80 break-all">
+					<div className="text-discord-accent">Is Auditor Key Set</div>
+					<div className="text-discord-accent/80 break-all">
 						{isAuditorKeySet ? "Yes" : "No"}
 					</div>
 
-					<div className="text-red-500">Auditor Public Key (hex)</div>
-					<div className="text-red-500/80 break-all">
+					<div className="text-discord-accent">Auditor Public Key (hex)</div>
+					<div className="text-discord-accent/80 break-all">
 						{isAuditorKeySet
 							? `0x${packPoint(auditorPublicKey as [bigint, bigint]).toString(16)}`
 							: "N/A"}
 					</div>
 
-					<div className="text-red-500">User Public Key (hex)</div>
-					<div className="text-red-500/80 break-all">
+					<div className="text-discord-accent">User Public Key (hex)</div>
+					<div className="text-discord-accent/80 break-all">
 						{!!publicKey.length && publicKey[0] !== 0n && publicKey[1] !== 0n
 							? `0x${packPoint(publicKey as [bigint, bigint]).toString(16)}`
 							: "N/A"}
@@ -95,18 +95,18 @@ export function StandaloneMode({
 			{/* Owner-only: Set Auditor section */}
 			{canSetAuditor && !isAuditorKeySet && (
 				<div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10 mt-2">
-					<div className="text-red-500 font-bold mb-2">Set Auditor</div>
+					<div className="text-discord-accent font-bold mb-2">Set Auditor</div>
 					<div className="flex gap-2 items-center">
 						<input
 							type="text"
 							value={auditorAddress}
 							onChange={(e) => setAuditorAddress(e.target.value)}
 							placeholder="0x... auditor address (must be registered)"
-							className="flex-1 bg-black/20 border border-red-500/40 rounded px-2 py-1 text-red-500 placeholder:text-cloak-gray"
+							className="flex-1 bg-black/20 border border-red-500/40 rounded px-2 py-1 text-discord-accent placeholder:text-cloak-gray"
 						/>
 						<button
 							onClick={() => onSetAuditor(auditorAddress)}
-							className="bg-cloak-dark text-red-500 px-2 py-1 rounded border border-red-500/60 hover:bg-red-500/60 transition-all duration-200"
+							className="bg-cloak-dark text-discord-accent px-2 py-1 rounded border border-red-500/60 hover:bg-red-500/60 transition-all duration-200"
 						>
 							Set Auditor
 						</button>
@@ -120,8 +120,8 @@ export function StandaloneMode({
 			<div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10 mt-1 mb-4">
 				<div className="grid grid-cols-[160px_1fr] gap-y-2 gap-x-2 items-center">
 					<div className="text-cloak-gray">Decrypted Balance</div>
-					<div className="text-red-500/80 break-all">
-						<span className="text-red-500">
+					<div className="text-discord-accent/80 break-all">
+						<span className="text-discord-accent">
 							{formatDisplayAmount(decryptedBalance)}
 							{` ${symbol}`}
 						</span>

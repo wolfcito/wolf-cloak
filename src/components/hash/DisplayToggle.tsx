@@ -9,7 +9,7 @@ export function DisplayToggle({ mode, onToggle }: DisplayToggleProps) {
 	return (
 		<button
 			onClick={onToggle}
-			className="px-4  bg-cloak-dark text-cloak-gray hover:text-red-500 border border-red-500/20 rounded-lg font-mono transition-colors duration-200"
+			className="px-4  bg-cloak-dark text-cloak-gray hover:text-discord-accent border border-red-500/20 rounded-lg font-mono transition-colors duration-200"
 			type="button"
 		>
 			{mode === "decimal" ? "Hex" : "Decimal"}

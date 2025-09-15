@@ -46,8 +46,8 @@ export function CurvePoint({
 		if (isOnCurve)
 			return {
 				boxStyle: "border-red-500/30 hover:border-red-500/30",
-				pinColor: "text-red-500/60",
-				textStyle: "text-red-500/60",
+				pinColor: "text-discord-accent/60",
+				textStyle: "text-discord-accent/60",
 			};
 		return {
 			boxStyle: "border-cloak-red/30 hover:border-cloak-red/30",

@@ -35,7 +35,7 @@ export function HashInputField({
 				<button
 					onClick={onRemove}
 					type="button"
-					className="px-4 bg-cloak-dark text-cloak-gray hover:text-red-500 rounded-lg border border-red-500/20"
+					className="px-4 bg-cloak-dark text-cloak-gray hover:text-discord-accent rounded-lg border border-red-500/20"
 					title="Remove input"
 				>
 					<FaTrash />

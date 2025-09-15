@@ -52,7 +52,7 @@ export function HashInput({
 				<div className="flex space-x-4">
 					<button
 						onClick={onAddInput}
-						className="px-4 bg-cloak-dark text-cloak-gray hover:text-red-500 border border-red-500/20 rounded-lg font-mono transition-colors duration-200 flex items-center space-x-2"
+						className="px-4 bg-cloak-dark text-cloak-gray hover:text-discord-accent border border-red-500/20 rounded-lg font-mono transition-colors duration-200 flex items-center space-x-2"
 						type="button"
 					>
 						<FaPlus size={12} />

@@ -35,13 +35,13 @@ export function AuditorPanel({
   return (
     <div className="border border-red-500/30 rounded-md p-4 font-mono text-sm bg-black/10 mt-4">
       <div className="flex items-center justify-between mb-2">
-        <div className="text-red-500 font-bold">Auditor Panel</div>
-        <div className="text-red-500/70">{status}</div>
+        <div className="text-discord-accent font-bold">Auditor Panel</div>
+        <div className="text-discord-accent/70">{status}</div>
       </div>
 
       <div className="flex gap-2 mb-3">
         <button
-          className="bg-cloak-dark text-red-500 px-2 py-1 rounded border border-red-500/60 hover:bg-red-500/60 transition-all duration-200"
+          className="bg-cloak-dark text-discord-accent px-2 py-1 rounded border border-red-500/60 hover:bg-red-500/60 transition-all duration-200"
           onClick={onRefresh}
           disabled={!areYouAuditor || !hasKey || loading}
           title={!areYouAuditor ? "Not an auditor" : !hasKey ? "Generate key first" : "Refresh"}
@@ -69,31 +69,31 @@ export function AuditorPanel({
               key={tx.transactionHash}
               className="grid grid-cols-[140px_1fr] gap-x-3 items-center border-b border-red-500/10 pb-2"
             >
-              <div className="text-red-500/80">
+              <div className="text-discord-accent/80">
                 {tx.type || "Tx"}
               </div>
               <div className="text-cloak-gray break-all">
                 {tx.sender && (
                   <>
-                    from <span className="text-red-500/80">{tx.sender}</span>
+                    from <span className="text-discord-accent/80">{tx.sender}</span>
                   </>
                 )}
                 {tx.receiver && (
                   <>
-                    {" "}to <span className="text-red-500/80">{tx.receiver}</span>
+                    {" "}to <span className="text-discord-accent/80">{tx.receiver}</span>
                   </>
                 )}
                 {tx.amount && (
                   <>
-                    {" "}amount <span className="text-red-500/80">{tx.amount}</span>
+                    {" "}amount <span className="text-discord-accent/80">{tx.amount}</span>
                   </>
                 )}
-                <div className="text-xs text-red-500/60">
+                <div className="text-xs text-discord-accent/60">
                   <a
                     href={`${explorerBaseTx}${tx.transactionHash}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="underline hover:text-red-500"
+                    className="underline hover:text-discord-accent"
                   >
                     {tx.transactionHash}
                   </a>

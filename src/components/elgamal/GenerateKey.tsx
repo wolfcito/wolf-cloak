@@ -30,7 +30,7 @@ export const GenerateKey = ({
 					<div className="space-y-2 font-mono text-sm">
 						<div className="text-cloak-gray">
 							Private Key:{" "}
-							<span className="text-red-500/60">
+							<span className="text-discord-accent/60">
 								{toHex(keyPair.privateKey.toString())}
 							</span>
 						</div>
@@ -46,7 +46,7 @@ export const GenerateKey = ({
 				<button
 					type="button"
 					onClick={handleGenerateKeyPair}
-					className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 hover:bg-red-500/60 transition-all duration-150"
+					className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 hover:bg-red-500/60 transition-all duration-150"
 				>
 					Generate Key Pair
 				</button>

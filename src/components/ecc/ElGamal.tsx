@@ -102,8 +102,8 @@ export const ElGamal = () => {
 	return (
 		<>
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-10 mb-2">
-				<h2 className="text-red-500 font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
-					<FaLock className="text-red-500" />
+				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
+					<FaLock className="text-discord-accent" />
 					ElGamal Encryption on BabyJubjub
 				</h2>
 				<div className="space-y-4">
@@ -117,7 +117,7 @@ export const ElGamal = () => {
 						original messages thanks to the homomorphic properties of the curve.
 					</p>
 					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-						<h3 className="text-red-500 font-semibold mb-2">
+						<h3 className="text-discord-accent font-semibold mb-2">
 							How it works:
 						</h3>
 						<ol className="list-decimal pl-6 space-y-2 text-sm">
@@ -132,8 +132,8 @@ export const ElGamal = () => {
 			<Divider title="🔐 Key Generation" />
 			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-4">
 				<div className="flex items-center justify-between mb-4">
-					<h3 className="text-red-500 font-semibold flex items-center gap-2">
-						<FaKey className="text-red-500" />
+					<h3 className="text-discord-accent font-semibold flex items-center gap-2">
+						<FaKey className="text-discord-accent" />
 						Key Pair
 					</h3>
 				</div>
@@ -145,8 +145,8 @@ export const ElGamal = () => {
 
 			<Divider title="📦 Encryption" />
 			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-4">
-				<h3 className="text-red-500 font-semibold mb-4 flex items-center gap-2">
-					<FaLock className="text-red-500" />
+				<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
+					<FaLock className="text-discord-accent" />
 					Encrypt Message
 				</h3>
 				<Encryption
@@ -162,8 +162,8 @@ export const ElGamal = () => {
 
 			<Divider title="🔑 Decryption" />
 			<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-				<h3 className="text-red-500 font-semibold mb-4 flex items-center gap-2">
-					<FaUnlock className="text-red-500" />
+				<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
+					<FaUnlock className="text-discord-accent" />
 					Decrypt Message
 				</h3>
 				<Decryption

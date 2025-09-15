@@ -124,12 +124,12 @@ export function PoseidonEncrypt() {
 	return (
 		<main className="max-w-4xl mx-auto px-4 py-8">
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-4">
-				<h2 className="text-red-500 font-bold text-lg mb-4 text-center">
+				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center">
 					Poseidon Encryption & Decryption
 				</h2>
 
 				<p className="text-justify indent-6">
-					<strong className="text-red-500">Poseidon encryption</strong> is a
+					<strong className="text-discord-accent">Poseidon encryption</strong> is a
 					specialized encryption method designed to work efficiently within
 					zero-knowledge proof systems. Unlike traditional encryption methods,
 					it's optimized for privacy-preserving applications where computational
@@ -160,7 +160,7 @@ export function PoseidonEncrypt() {
 				</p>
 
 				<div className="bg-cloak-dark/50 border border-red-500/50 p-4 rounded-md my-6">
-					<h3 className="text-red-500 font-bold mb-2">
+					<h3 className="text-discord-accent font-bold mb-2">
 						Poseidon Encryption (PCTS) in eERC
 					</h3>
 					<p className="text-justify">
@@ -217,30 +217,30 @@ export function PoseidonEncrypt() {
 
 					<ul className="list-disc pl-10 space-y-2">
 						<li>
-							<strong className="text-red-500/80">Inputs:</strong> The
+							<strong className="text-discord-accent/80">Inputs:</strong> The
 							numbers you want to encrypt (like account balances or transaction
 							amounts).
 						</li>
 						<li>
-							<strong className="text-red-500/80">Encryption Key:</strong> A
+							<strong className="text-discord-accent/80">Encryption Key:</strong> A
 							shared secret created using your private key and the recipient's
 							public key. This ensures only the intended recipient can decrypt
 							the data.
 						</li>
 						<li>
-							<strong className="text-red-500/80">Nonce:</strong> A random
+							<strong className="text-discord-accent/80">Nonce:</strong> A random
 							value that makes each encryption unique, even if you encrypt the
 							same data multiple times.
 						</li>
 						<li>
-							<strong className="text-red-500/80">
+							<strong className="text-discord-accent/80">
 								Authentication Key:
 							</strong>{" "}
 							A verification key that helps ensure the encrypted data hasn't
 							been tampered with.
 						</li>
 						<li>
-							<strong className="text-red-500/80">Ciphertext:</strong> The
+							<strong className="text-discord-accent/80">Ciphertext:</strong> The
 							final encrypted result that can be safely stored or transmitted.
 						</li>
 					</ul>
@@ -252,16 +252,16 @@ export function PoseidonEncrypt() {
 					<ul className="list-disc pl-10 space-y-2">
 						<li>
 							The{" "}
-							<span className="text-red-500 font-semibold">ciphertext</span>{" "}
+							<span className="text-discord-accent font-semibold">ciphertext</span>{" "}
 							(the encrypted data)
 						</li>
 						<li>
-							The <span className="text-red-500 font-semibold">nonce</span>{" "}
+							The <span className="text-discord-accent font-semibold">nonce</span>{" "}
 							(the random value used during encryption)
 						</li>
 						<li>
 							The{" "}
-							<span className="text-red-500 font-semibold">auth key</span>{" "}
+							<span className="text-discord-accent font-semibold">auth key</span>{" "}
 							(used to verify the data hasn't been tampered with)
 						</li>
 					</ul>
@@ -295,7 +295,7 @@ export function PoseidonEncrypt() {
 					type="button"
 					onClick={handleEncrypt}
 					disabled={!keyPair.privateKey || !inputs}
-					className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
+					className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
 				>
 					Encrypt
 				</button>
@@ -307,7 +307,7 @@ export function PoseidonEncrypt() {
 					>
 						<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 mt-2 text-sm">
 							<p>
-								<strong className="text-red-500">Encryption Random</strong>:{" "}
+								<strong className="text-discord-accent">Encryption Random</strong>:{" "}
 								<code>{encryptionRandom.toString()}</code>
 							</p>
 						</div>
@@ -320,7 +320,7 @@ export function PoseidonEncrypt() {
 					>
 						<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 mt-2 text-sm">
 							<p>
-								<strong className="text-red-500">Encryption Key</strong>:{" "}
+								<strong className="text-discord-accent">Encryption Key</strong>:{" "}
 								<code>
 									{packPoint([encryptionKey.x, encryptionKey.y]).toString(16)}
 								</code>
@@ -337,7 +337,7 @@ export function PoseidonEncrypt() {
 					>
 						<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 mt-2 text-sm">
 							<p>
-								<strong className="text-red-500">Authentication Key</strong>
+								<strong className="text-discord-accent">Authentication Key</strong>
 								: <code>{packPoint([authKey.x, authKey.y]).toString(16)}</code>
 							</p>
 						</div>
@@ -350,7 +350,7 @@ export function PoseidonEncrypt() {
 					>
 						<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 text-sm mt-2">
 							<p>
-								<strong className="text-red-500">Nonce</strong>:{" "}
+								<strong className="text-discord-accent">Nonce</strong>:{" "}
 								<code>{nonce.toString()}</code>
 							</p>
 						</div>
@@ -359,7 +359,7 @@ export function PoseidonEncrypt() {
 
 				{ciphertext.length > 0 && (
 					<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 text-sm mt-2 font-mono">
-						<strong className="text-red-500">Ciphertext</strong>
+						<strong className="text-discord-accent">Ciphertext</strong>
 						{ciphertext.map((c) => (
 							<p key={c.toString()}>{c.toString()}</p>
 						))}
@@ -372,7 +372,7 @@ export function PoseidonEncrypt() {
 				</p>
 				<button
 					type="button"
-					className="bg-cloak-dark w-full text-red-500 px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
+					className="bg-cloak-dark w-full text-discord-accent px-2 py-1 rounded-md text-sm border border-red-500/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-red-500/60 transition-all duration-200 font-mono mt-2"
 					onClick={handleDecrypt}
 					disabled={
 						!keyPair.privateKey ||
@@ -388,7 +388,7 @@ export function PoseidonEncrypt() {
 
 				{decrypted.length > 0 && (
 					<div className="border border-red-500/40 py-2 px-4 rounded bg-black/20 text-sm mt-2 font-mono">
-						<strong className="text-red-500">Decrypted Values</strong>
+						<strong className="text-discord-accent">Decrypted Values</strong>
 						{decrypted.map((d) => (
 							<p key={d.toString()}>{d.toString()}</p>
 						))}

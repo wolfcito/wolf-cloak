@@ -60,8 +60,8 @@ export function ECC() {
 	return (
 		<main className="max-w-6xl mx-auto px-4 py-8">
 			<div className="text-cloak-gray font-mono text-sm leading-relaxed mt-4 mb-6">
-				<h2 className="text-red-500 font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
-					<FaCalculator className="text-red-500" />
+				<h2 className="text-discord-accent font-bold text-lg mb-4 text-center flex items-center justify-center gap-2">
+					<FaCalculator className="text-discord-accent" />
 					ECC (BabyJubjub)
 				</h2>
 				<div className="space-y-4">
@@ -73,7 +73,7 @@ export function ECC() {
 						preferred choice for privacy-preserving applications.
 					</p>
 					<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20">
-						<h3 className="text-red-500 font-semibold mb-2">
+						<h3 className="text-discord-accent font-semibold mb-2">
 							Why BabyJubjub?
 						</h3>
 						<ul className="list-disc pl-6 space-y-2 text-sm">
@@ -95,7 +95,7 @@ export function ECC() {
 									content="The mathematical equation that defines the BabyJubjub curve"
 									id="curve-equation-tooltip"
 								>
-									<FaInfoCircle className="text-red-500/60 cursor-help" />
+									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -113,7 +113,7 @@ export function ECC() {
 									content="The finite field over which the curve is defined"
 									id="prime-field-tooltip"
 								>
-									<FaInfoCircle className="text-red-500/60 cursor-help" />
+									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -131,7 +131,7 @@ export function ECC() {
 									content="Base point used for public key generation and cryptographic operations"
 									id="generator-point-tooltip"
 								>
-									<FaInfoCircle className="text-red-500/60 cursor-help" />
+									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -151,7 +151,7 @@ export function ECC() {
 									content="Alternative base point used for specific operations"
 									id="base8-point-tooltip"
 								>
-									<FaInfoCircle className="text-red-500/60 cursor-help" />
+									<FaInfoCircle className="text-discord-accent/60 cursor-help" />
 								</RightTooltip>
 							</h3>
 							<MathEquation>
@@ -169,8 +169,8 @@ export function ECC() {
 
 			<div className="mt-6">
 				<div className="bg-cloak-dark/30 p-4 rounded-lg border border-red-500/20 mb-6">
-					<h3 className="text-red-500 font-semibold mb-4 flex items-center gap-2">
-						<FaPlay className="text-red-500" />
+					<h3 className="text-discord-accent font-semibold mb-4 flex items-center gap-2">
+						<FaPlay className="text-discord-accent" />
 						Point Playground
 					</h3>
 					<p className="text-sm text-cloak-gray mb-4">
@@ -254,14 +254,14 @@ export function ECC() {
 							content="Compresses a point into a single value for efficient storage"
 							id="point-compression-tooltip"
 						>
-							<FaInfoCircle className="text-red-500/60 cursor-help" />
+							<FaInfoCircle className="text-discord-accent/60 cursor-help" />
 						</RightTooltip>
 					</p>
 
 					<div className="group relative flex-1">
 						<div className="flex items-center space-x-4 bg-cloak-dark/50 px-4 py-3 rounded-lg border border-red-500/30 hover:border-red-500/30 transition-all">
 							<div className="flex-shrink-0 w-12 h-12 flex items-center justify-center flex-col">
-								<FaMapPin className="w-6 h-6 self-center text-red-500/60" />
+								<FaMapPin className="w-6 h-6 self-center text-discord-accent/60" />
 								<div className="text-xs text-center mt-1 text-cloak-gray font-mono">
 									Packed
 								</div>
@@ -269,7 +269,7 @@ export function ECC() {
 
 							<div className="font-mono">
 								<div className="text-sm">
-									<span className="text-red-500/60">
+									<span className="text-discord-accent/60">
 										{packed === 0n ? "0" : packed.toString(16)}
 									</span>
 								</div>
