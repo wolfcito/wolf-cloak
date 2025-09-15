@@ -56,11 +56,18 @@ export function useSubgraphAuditor(params: {
   address?: `0x${string}`;
   contract: `0x${string}`;
   areYouAuditor?: boolean;
+  decryptionKey?: string; // optional key provided from app state
 }) {
-  const { address, contract, areYouAuditor } = params;
-  const [hasKey, setHasKey] = useState(false);
-  const [keyString, setKeyString] = useState("");
+  const { address, contract, areYouAuditor, decryptionKey } = params;
+  const [hasKey, setHasKey] = useState(Boolean(decryptionKey));
+  const [keyString, setKeyString] = useState(decryptionKey ?? "");
   useEffect(() => {
+    if (decryptionKey) {
+      setHasKey(true);
+      setKeyString(decryptionKey);
+      return;
+    }
+    // Fallback: try localStorage (legacy behavior)
     if (!address || !contract) return;
     try {
       const stored = localStorage.getItem(`eerc:dk:${contract}:${address}`);
@@ -75,7 +82,7 @@ export function useSubgraphAuditor(params: {
       setHasKey(false);
       setKeyString("");
     }
-  }, [address, contract]);
+  }, [address, contract, decryptionKey]);
   const { data, loading, error, refetch } = useGql<any>({
     query: AUDITOR_QUERY,
     variables: { aud: address, contract },
@@ -84,21 +91,28 @@ export function useSubgraphAuditor(params: {
 
   const refresh = useMemo(() => {
     return async () => {
-      // Re-check for key in localStorage before refetching
-      try {
-        if (address && contract) {
-          const stored = localStorage.getItem(`eerc:dk:${contract}:${address}`);
-          if (stored) {
-            if (!hasKey || stored !== keyString) {
-              setHasKey(true);
-              setKeyString(stored);
+      // Ensure local state follows prop if present; otherwise legacy check
+      if (decryptionKey) {
+        if (!hasKey || keyString !== decryptionKey) {
+          setHasKey(true);
+          setKeyString(decryptionKey);
+        }
+      } else {
+        try {
+          if (address && contract) {
+            const stored = localStorage.getItem(`eerc:dk:${contract}:${address}`);
+            if (stored) {
+              if (!hasKey || stored !== keyString) {
+                setHasKey(true);
+                setKeyString(stored);
+              }
             }
           }
-        }
-      } catch {}
+        } catch {}
+      }
       await refetch();
     };
-  }, [address, contract, hasKey, keyString, refetch]);
+  }, [address, contract, hasKey, keyString, refetch, decryptionKey]);
 
   const items = useMemo(() => {
     if (!data) return [] as Array<any>;

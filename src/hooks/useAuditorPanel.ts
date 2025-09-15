@@ -33,11 +33,6 @@ export function useAuditorPanel(params: {
       const key = await generateDecryptionKey();
       setHasKey(true);
       setKeyString(key);
-      if (address && contract) {
-        try {
-          localStorage.setItem(`eerc:dk:${contract}:${address}`, key);
-        } catch {}
-      }
     } catch (e: any) {
       setError(e?.message || String(e));
     }
@@ -72,24 +67,7 @@ export function useAuditorPanel(params: {
     }
   }, [auditorDecrypt, areYouAuditor]);
 
-  // Try load saved key from localStorage
-  const tryLoadKey = useCallback(() => {
-    if (!address || !contract) return false;
-    try {
-      const stored = localStorage.getItem(`eerc:dk:${contract}:${address}`);
-      if (stored && stored.length > 0) {
-        setKeyString(stored);
-        setHasKey(true);
-        return true;
-      }
-    } catch {}
-    return false;
-  }, [address, contract]);
-
-  // Load key on mount/when contract or address changes
-  useMemo(() => {
-    tryLoadKey();
-  }, [tryLoadKey]);
+  // No persistence: do not auto-load any key
 
   const manualScan = useCallback(async () => {
     if (!client || !contract || !address || !hasKey || !keyString) {
