@@ -382,14 +382,14 @@ export function EERC() {
   return (
     <div className="max-w-7xl mx-auto">
       {/* Hero Section */}
-      <div className="text-center mb-12">
+      {/* <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-enigma-text mb-4">
           <span className="text-enigma-primary">Transaction privacy</span> with eERC20 on Avalanche
         </h1>
         <p className="text-lg text-enigma-text-muted max-w-3xl mx-auto">
           Optional auditing and non-custodial on Fuji Testnet. Your privacy, your control, your financial freedom.
         </p>
-      </div>
+      </div> */}
 
       {/* Main Dashboard Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">

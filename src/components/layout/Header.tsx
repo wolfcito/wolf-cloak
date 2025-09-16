@@ -10,9 +10,9 @@ export function Header() {
 	};
 
 	return (
-		<header className="bg-enigma-white border-b border-enigma-border h-16 flex items-center justify-between px-8">
+		<header className="h-16 flex items-center justify-between px-8">
 			{/* Left side - Logo */}
-			<div className="flex items-center space-x-3">
+			{/* <div className="flex items-center space-x-3">
 				<div className="w-10 h-10 bg-enigma-primary rounded-lg flex items-center justify-center">
 					<svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -22,34 +22,34 @@ export function Header() {
 					<span className="text-enigma-primary font-bold text-lg">Enigma Protocol</span>
 					<span className="text-enigma-text-muted text-xs">by AvalPay</span>
 				</div>
-			</div>
+			</div> */}
 
 			{/* Center - Navigation */}
-			<nav className="flex items-center space-x-8">
+			{/* <nav className="flex items-center space-x-8">
 				<a href="#" className="text-enigma-text-muted hover:text-enigma-primary transition-colors font-medium">Pricing</a>
 				<a href="#" className="text-enigma-text-muted hover:text-enigma-primary transition-colors font-medium">Docs</a>
 				<a href="#" className="text-enigma-text-muted hover:text-enigma-primary transition-colors font-medium">Help/FAQ</a>
 				<a href="#" className="text-enigma-text-muted hover:text-enigma-primary transition-colors font-medium">About</a>
-			</nav>
+			</nav> */}
 
 			{/* Right side - Network, Language, and User */}
 			<div className="flex items-center space-x-4">
 				{/* Network Selector */}
-				<div className="flex items-center space-x-2 bg-enigma-white border border-enigma-border rounded-lg px-3 py-2">
+				{/* <div className="flex items-center space-x-2 bg-enigma-white border border-enigma-border rounded-lg px-3 py-2">
 					<div className="w-2 h-2 bg-enigma-green rounded-full"></div>
 					<span className="text-enigma-text font-medium">Fuji Testnet</span>
 					<svg className="w-4 h-4 text-enigma-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 					</svg>
-				</div>
+				</div> */}
 
 				{/* Language Selector */}
-				<div className="flex items-center space-x-2 bg-enigma-white border border-enigma-border rounded-lg px-3 py-2">
+				{/* <div className="flex items-center space-x-2 bg-enigma-white border border-enigma-border rounded-lg px-3 py-2">
 					<span className="text-enigma-text font-medium">EN - English</span>
 					<svg className="w-4 h-4 text-enigma-text-muted" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 						<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
 					</svg>
-				</div>
+				</div> */}
 
 				{/* Sign In Button */}
 				{isConnected && address ? (
