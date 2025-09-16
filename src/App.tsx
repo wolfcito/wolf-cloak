@@ -9,7 +9,7 @@ const EERC = lazy(() =>
 // Loading component
 const LoadingFallback = () => (
 	<div className="flex items-center justify-center h-full">
-		<div className="text-trading-accent font-mono">Loading...</div>
+		<div className="text-enigma-primary font-mono">Loading...</div>
 	</div>
 );
 
@@ -17,11 +17,11 @@ export function App() {
 	const [activeSection, setActiveSection] = useState("dashboard");
 
 	return (
-		<div className="min-h-screen bg-trading-darkest flex flex-col">
+		<div className="min-h-screen bg-enigma-bg flex flex-col">
 			<Header />
 			<div className="flex flex-1">
 				<Sidebar activeSection={activeSection} onSectionChange={setActiveSection} />
-				<main className="flex-1 bg-trading-darkest p-6">
+				<main className="flex-1 bg-enigma-bg p-8">
 					<Suspense fallback={<LoadingFallback />}>
 						<EERC />
 					</Suspense>

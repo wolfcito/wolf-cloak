@@ -103,7 +103,7 @@ export function Sidebar({ activeSection = "dashboard", onSectionChange }: Sideba
 	];
 
 	return (
-		<aside className="w-16 bg-trading-sidebar border-r border-trading-border h-full flex flex-col items-center py-4">
+		<aside className="w-16 bg-enigma-sidebar border-r border-enigma-border h-full flex flex-col items-center py-4 shadow-sm">
 			{/* Main sections */}
 			{sections.slice(0, 6).map((section) => {
 				const IconComponent = section.icon;
@@ -113,8 +113,8 @@ export function Sidebar({ activeSection = "dashboard", onSectionChange }: Sideba
 						onClick={() => handleSectionClick(section.id)}
 						className={`w-12 h-12 rounded-lg flex items-center justify-center mb-3 transition-all duration-200 ${
 							active === section.id
-								? "bg-trading-accent text-trading-darkest"
-								: "text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+								? "bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white shadow-md"
+								: "text-enigma-text-muted hover:text-enigma-text hover:bg-enigma-hover"
 						}`}
 						title={section.label}
 					>
@@ -124,7 +124,7 @@ export function Sidebar({ activeSection = "dashboard", onSectionChange }: Sideba
 			})}
 			
 			{/* Separator */}
-			<div className="w-8 h-px bg-trading-border my-2"></div>
+			<div className="w-8 h-px bg-enigma-border my-2"></div>
 			
 			{/* Secondary sections */}
 			{sections.slice(6, 9).map((section) => {
@@ -135,8 +135,8 @@ export function Sidebar({ activeSection = "dashboard", onSectionChange }: Sideba
 						onClick={() => handleSectionClick(section.id)}
 						className={`w-12 h-12 rounded-lg flex items-center justify-center mb-3 transition-all duration-200 ${
 							active === section.id
-								? "bg-trading-accent text-trading-darkest"
-								: "text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+								? "bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white shadow-md"
+								: "text-enigma-text-muted hover:text-enigma-text hover:bg-enigma-hover"
 						}`}
 						title={section.label}
 					>
@@ -155,8 +155,8 @@ export function Sidebar({ activeSection = "dashboard", onSectionChange }: Sideba
 						onClick={() => handleSectionClick(section.id)}
 						className={`w-12 h-12 rounded-lg flex items-center justify-center mb-3 transition-all duration-200 ${
 							active === section.id
-								? "bg-trading-accent text-trading-darkest"
-								: "text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+								? "bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white shadow-md"
+								: "text-enigma-text-muted hover:text-enigma-text hover:bg-enigma-hover"
 						}`}
 						title={section.label}
 					>

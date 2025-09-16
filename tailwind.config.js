@@ -4,48 +4,69 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Trading platform inspired color palette
-        "trading-darkest": "#1A1A1A",     // Main dark background
-        "trading-darker": "#212121",      // Darker background
-        "trading-dark": "#2C2C2C",        // Card backgrounds
-        "trading-sidebar": "#1E1E1E",     // Sidebar background
-        "trading-panel": "#242424",       // Panel background
-        "trading-text": "#FFFFFF",        // Primary text color
-        "trading-text-muted": "#B0B0B0",  // Muted text color
-        "trading-accent": "#00E676",      // Bright green accent
-        "trading-red": "#FF5252",         // Red accent
-        "trading-green": "#00E676",       // Success green
-        "trading-yellow": "#FFC107",      // Warning yellow
-        "trading-orange": "#FF9800",      // Orange accent
-        "trading-purple": "#9C27B0",      // Purple accent
-        "trading-pink": "#E91E63",        // Pink accent
-        "trading-border": "#3A3A3A",      // Border color
-        "trading-hover": "#3A3A3A",       // Hover state
-        "trading-selected": "#404040",    // Selected state
+        // Enigma Protocol light theme color palette
+        "enigma-bg": "#F8F8FC",           // Main light background
+        "enigma-white": "#FFFFFF",        // Pure white for cards
+        "enigma-sidebar": "#FFFFFF",      // Sidebar background
+        "enigma-panel": "#FFFFFF",        // Panel background
+        "enigma-text": "#1A1A1A",         // Primary dark text
+        "enigma-text-muted": "#6B7280",   // Muted text color
+        "enigma-text-light": "#9CA3AF",   // Light text color
+        "enigma-primary": "#4A2C8C",      // Dark blue/purple primary
+        "enigma-accent": "#3B82F6",       // Blue accent
+        "enigma-red": "#EF4444",          // Red accent
+        "enigma-green": "#10B981",        // Green accent
+        "enigma-yellow": "#F59E0B",       // Yellow accent
+        "enigma-orange": "#F97316",       // Orange accent
+        "enigma-purple": "#8B5CF6",       // Purple accent
+        "enigma-pink": "#EC4899",         // Pink accent
+        "enigma-border": "#E5E7EB",       // Light border color
+        "enigma-hover": "#F3F4F6",        // Hover state
+        "enigma-selected": "#EDE9FE",     // Selected state
+        // Gradient colors for buttons
+        "enigma-gradient-start": "#3B82F6", // Blue start
+        "enigma-gradient-end": "#4A2C8C",   // Purple end
         // Legacy colors for compatibility
-        "chess-dark": "#2C2C2C",
-        "chess-darker": "#212121",
-        "chess-darkest": "#1A1A1A",
-        "chess-sidebar": "#1E1E1E",
-        "chess-panel": "#242424",
-        "chess-text": "#FFFFFF",
-        "chess-text-muted": "#B0B0B0",
-        "chess-accent": "#00E676",
-        "chess-red": "#FF5252",
-        "chess-green": "#00E676",
-        "chess-yellow": "#FFC107",
-        "chess-orange": "#FF9800",
-        "chess-purple": "#9C27B0",
-        "chess-pink": "#E91E63",
-        "chess-border": "#3A3A3A",
-        "chess-hover": "#3A3A3A",
-        "chess-selected": "#404040",
-        "cloak-black": "#212121",
-        "cloak-dark": "#2C2C2C",
-        "cloak-blue": "#00E676",
-        "cloak-purple": "#9C27B0",
-        "cloak-gray": "#FFFFFF",
-        "cloak-red": "#FF5252",
+        "trading-darkest": "#F8F8FC",
+        "trading-darker": "#FFFFFF",
+        "trading-dark": "#FFFFFF",
+        "trading-sidebar": "#FFFFFF",
+        "trading-panel": "#FFFFFF",
+        "trading-text": "#1A1A1A",
+        "trading-text-muted": "#6B7280",
+        "trading-accent": "#4A2C8C",
+        "trading-red": "#EF4444",
+        "trading-green": "#10B981",
+        "trading-yellow": "#F59E0B",
+        "trading-orange": "#F97316",
+        "trading-purple": "#8B5CF6",
+        "trading-pink": "#EC4899",
+        "trading-border": "#E5E7EB",
+        "trading-hover": "#F3F4F6",
+        "trading-selected": "#EDE9FE",
+        "chess-dark": "#FFFFFF",
+        "chess-darker": "#FFFFFF",
+        "chess-darkest": "#F8F8FC",
+        "chess-sidebar": "#FFFFFF",
+        "chess-panel": "#FFFFFF",
+        "chess-text": "#1A1A1A",
+        "chess-text-muted": "#6B7280",
+        "chess-accent": "#4A2C8C",
+        "chess-red": "#EF4444",
+        "chess-green": "#10B981",
+        "chess-yellow": "#F59E0B",
+        "chess-orange": "#F97316",
+        "chess-purple": "#8B5CF6",
+        "chess-pink": "#EC4899",
+        "chess-border": "#E5E7EB",
+        "chess-hover": "#F3F4F6",
+        "chess-selected": "#EDE9FE",
+        "cloak-black": "#FFFFFF",
+        "cloak-dark": "#FFFFFF",
+        "cloak-blue": "#4A2C8C",
+        "cloak-purple": "#8B5CF6",
+        "cloak-gray": "#1A1A1A",
+        "cloak-red": "#EF4444",
       },
       fontFamily: {
         mono: ['"Anonymous Pro"', '"Roboto Mono"', "monospace"],

@@ -381,55 +381,65 @@ export function EERC() {
 
   return (
     <div className="max-w-7xl mx-auto">
+      {/* Hero Section */}
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-enigma-text mb-4">
+          <span className="text-enigma-primary">Transaction privacy</span> with eERC20 on Avalanche
+        </h1>
+        <p className="text-lg text-enigma-text-muted max-w-3xl mx-auto">
+          Optional auditing and non-custodial on Fuji Testnet. Your privacy, your control, your financial freedom.
+        </p>
+      </div>
+
       {/* Main Dashboard Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
         {/* Contracts Card */}
         <div className="lg:col-span-3">
-          <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
-            <div className="flex items-center justify-between mb-4">
-              <h3 className="text-trading-text font-bold text-lg">📜 Contracts - Avalanche Fuji Testnet</h3>
+          <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 shadow-sm">
+            <div className="flex items-center justify-between mb-6">
+              <h3 className="text-enigma-text font-bold text-xl">📜 Contracts - Avalanche Fuji Testnet</h3>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
-                <div className="text-trading-accent font-semibold mb-2">eERC Native</div>
-                <div className="text-trading-text-muted text-sm break-all mb-2">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-enigma-bg border border-enigma-border rounded-lg p-6">
+                <div className="text-enigma-primary font-semibold mb-3 text-lg">eERC Native</div>
+                <div className="text-enigma-text-muted text-sm break-all mb-3">
                   {CONTRACTS.EERC_STANDALONE}
                 </div>
                 <a
                   href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_STANDALONE}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                  className="text-sm text-enigma-primary underline hover:text-enigma-primary/80 transition-colors"
                 >
                   See on Explorer →
                 </a>
               </div>
 
-              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
-                <div className="text-trading-accent font-semibold mb-2">eERC Wrapper</div>
-                <div className="text-trading-text-muted text-sm break-all mb-2">
+              <div className="bg-enigma-bg border border-enigma-border rounded-lg p-6">
+                <div className="text-enigma-primary font-semibold mb-3 text-lg">eERC Wrapper</div>
+                <div className="text-enigma-text-muted text-sm break-all mb-3">
                   {CONTRACTS.EERC_CONVERTER}
                 </div>
                 <a
                   href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_CONVERTER}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                  className="text-sm text-enigma-primary underline hover:text-enigma-primary/80 transition-colors"
                 >
                   See on Explorer →
                 </a>
               </div>
 
-              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
-                <div className="text-trading-accent font-semibold mb-2">Test ERC-20</div>
-                <div className="text-trading-text-muted text-sm break-all mb-2">
+              <div className="bg-enigma-bg border border-enigma-border rounded-lg p-6">
+                <div className="text-enigma-primary font-semibold mb-3 text-lg">Test ERC-20</div>
+                <div className="text-enigma-text-muted text-sm break-all mb-3">
                   {CONTRACTS.ERC20}
                 </div>
                 <a
                   href={`${EXPLORER_BASE_URL}${CONTRACTS.ERC20}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                  className="text-sm text-enigma-primary underline hover:text-enigma-primary/80 transition-colors"
                 >
                   See on Explorer →
                 </a>
@@ -440,13 +450,13 @@ export function EERC() {
       </div>
 
       {/* Wallet Connection Card */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
-          <h3 className="text-trading-text font-bold text-lg mb-4">🔗 Wallet Connection</h3>
-          <div className="space-y-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 shadow-sm">
+          <h3 className="text-enigma-text font-bold text-xl mb-6">🔗 Wallet Connection</h3>
+          <div className="space-y-4">
             <button
               type="button"
-              className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+              className="w-full bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white px-6 py-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:from-enigma-gradient-start/90 hover:to-enigma-gradient-end/90 transition-all duration-200 shadow-md"
               disabled={isConnected}
               onClick={() => {
                 if (isConnected) {
@@ -469,7 +479,7 @@ export function EERC() {
             {isConnected && (
               <button
                 type="button"
-                className="w-full bg-trading-dark text-trading-text px-4 py-3 rounded-lg font-medium border border-trading-border disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-hover transition-all duration-200"
+                className="w-full bg-enigma-white text-enigma-text px-6 py-4 rounded-lg font-medium border border-enigma-border disabled:opacity-50 disabled:cursor-not-allowed hover:bg-enigma-hover transition-all duration-200 shadow-sm"
                 disabled={!isConnected}
                 onClick={async () => {
                   if (!isConnected) {
@@ -486,11 +496,11 @@ export function EERC() {
         </div>
 
         {/* Decryption Key Card */}
-        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
-          <h3 className="text-trading-text font-bold text-lg mb-4">🔑 Generate Decryption Key</h3>
+        <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 shadow-sm">
+          <h3 className="text-enigma-text font-bold text-xl mb-6">🔑 Generate Decryption Key</h3>
           <button
             type="button"
-            className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+            className="w-full bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white px-6 py-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:from-enigma-gradient-start/90 hover:to-enigma-gradient-end/90 transition-all duration-200 shadow-md"
             disabled={isDecryptionKeySet}
             onClick={async () => {
               if (!isConnected) {
@@ -528,12 +538,12 @@ export function EERC() {
       </div>
 
       {/* Registration Card */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
-          <h3 className="text-trading-text font-bold text-lg mb-4">🧾 Registration</h3>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+        <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 shadow-sm">
+          <h3 className="text-enigma-text font-bold text-xl mb-6">🧾 Registration</h3>
           <button
             type="button"
-            className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+            className="w-full bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white px-6 py-4 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:from-enigma-gradient-start/90 hover:to-enigma-gradient-end/90 transition-all duration-200 shadow-md"
             disabled={isRegistered || isRegistering || !isDecryptionKeySet}
             onClick={async () => {
               setIsRegistering(true);
@@ -553,7 +563,7 @@ export function EERC() {
               <div className="flex flex-col items-center gap-1">
                 <span>Registering your wallet...</span>
                 {txHash && (
-                  <span className="text-xs text-trading-text-muted">
+                  <span className="text-xs text-white/80">
                     Transaction: {txHash.slice(0, 6)}...{txHash.slice(-4)}
                   </span>
                 )}
@@ -565,24 +575,24 @@ export function EERC() {
         </div>
 
         {/* Mode Selection Card */}
-        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
-          <h3 className="text-trading-text font-bold text-lg mb-4">📜 eERC Contract Mode</h3>
-          <div className="flex space-x-2">
+        <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 shadow-sm">
+          <h3 className="text-enigma-text font-bold text-xl mb-6">📜 eERC Contract Mode</h3>
+          <div className="flex space-x-3">
             <button
-              className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                 mode === "standalone"
-                  ? "bg-trading-accent text-trading-darkest"
-                  : "bg-trading-dark text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+                  ? "bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white shadow-md"
+                  : "bg-enigma-bg text-enigma-text-muted hover:text-enigma-text hover:bg-enigma-hover border border-enigma-border"
               }`}
               onClick={() => setMode("standalone")}
             >
               Standalone Mode
             </button>
             <button
-              className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-3 rounded-lg font-medium transition-all duration-200 ${
                 mode === "converter"
-                  ? "bg-trading-accent text-trading-darkest"
-                  : "bg-trading-dark text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+                  ? "bg-gradient-to-r from-enigma-gradient-start to-enigma-gradient-end text-white shadow-md"
+                  : "bg-enigma-bg text-enigma-text-muted hover:text-enigma-text hover:bg-enigma-hover border border-enigma-border"
               }`}
               onClick={() => setMode("converter")}
             >
@@ -594,24 +604,24 @@ export function EERC() {
 
       {/* Transaction Pending Indicator */}
       {isTransactionPending && (
-        <div className="bg-trading-panel border border-trading-border rounded-lg p-6 mb-6">
-          <div className="flex flex-col items-center gap-4">
-            <div className="text-trading-accent font-bold text-xl">
+        <div className="bg-enigma-white border border-enigma-border rounded-xl p-8 mb-8 shadow-sm">
+          <div className="flex flex-col items-center gap-6">
+            <div className="text-enigma-primary font-bold text-2xl">
               {transactionType} in progress...
             </div>
             {txHash && (
-              <div className="flex flex-col items-center p-4 bg-trading-dark rounded-lg w-full">
-                <span className="text-trading-accent font-semibold mb-2">
+              <div className="flex flex-col items-center p-6 bg-enigma-bg rounded-lg w-full border border-enigma-border">
+                <span className="text-enigma-primary font-semibold mb-3 text-lg">
                   Transaction Hash:
                 </span>
-                <span className="text-sm text-trading-text-muted font-mono p-3 rounded w-full text-center break-all bg-trading-darker">
+                <span className="text-sm text-enigma-text-muted font-mono p-4 rounded-lg w-full text-center break-all bg-enigma-white border border-enigma-border">
                   {txHash}
                 </span>
                 <a
                   href={`${EXPLORER_BASE_URL_TX}${txHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-trading-accent underline hover:text-trading-accent/80 mt-3 bg-trading-accent/10 px-4 py-2 rounded-lg"
+                  className="text-sm text-enigma-primary underline hover:text-enigma-primary/80 mt-4 bg-enigma-primary/10 px-6 py-3 rounded-lg transition-colors"
                 >
                   View on Explorer →
                 </a>
@@ -687,14 +697,14 @@ export function EERC() {
       />
 
       {/* Footer */}
-      <div className="mt-8 text-center">
-        <p className="text-sm text-trading-text-muted">
+      <div className="mt-12 text-center">
+        <p className="text-sm text-enigma-text-muted">
           Want to learn more? See the full documentation on our{" "}
           <a
             href="https://docs.avacloud.io/encrypted-erc"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-trading-accent transition-colors"
+            className="underline hover:text-enigma-primary transition-colors"
           >
             GitBook →
           </a>

@@ -7,47 +7,68 @@
 @tailwind utilities;
 
 :root {
-  /* Trading platform inspired color variables */
-  --trading-darkest: #1A1A1A;
-  --trading-darker: #212121;
-  --trading-dark: #2C2C2C;
-  --trading-sidebar: #1E1E1E;
-  --trading-panel: #242424;
-  --trading-text: #FFFFFF;
-  --trading-text-muted: #B0B0B0;
-  --trading-accent: #00E676;
-  --trading-red: #FF5252;
-  --trading-green: #00E676;
-  --trading-yellow: #FFC107;
-  --trading-orange: #FF9800;
-  --trading-purple: #9C27B0;
-  --trading-pink: #E91E63;
-  --trading-border: #3A3A3A;
-  --trading-hover: #3A3A3A;
-  --trading-selected: #404040;
+  /* Enigma Protocol light theme color variables */
+  --enigma-bg: #F8F8FC;
+  --enigma-white: #FFFFFF;
+  --enigma-sidebar: #FFFFFF;
+  --enigma-panel: #FFFFFF;
+  --enigma-text: #1A1A1A;
+  --enigma-text-muted: #6B7280;
+  --enigma-text-light: #9CA3AF;
+  --enigma-primary: #4A2C8C;
+  --enigma-accent: #3B82F6;
+  --enigma-red: #EF4444;
+  --enigma-green: #10B981;
+  --enigma-yellow: #F59E0B;
+  --enigma-orange: #F97316;
+  --enigma-purple: #8B5CF6;
+  --enigma-pink: #EC4899;
+  --enigma-border: #E5E7EB;
+  --enigma-hover: #F3F4F6;
+  --enigma-selected: #EDE9FE;
+  /* Gradient colors for buttons */
+  --enigma-gradient-start: #3B82F6;
+  --enigma-gradient-end: #4A2C8C;
   /* Legacy variables for compatibility */
-  --chess-dark: #2C2C2C;
-  --chess-darker: #212121;
-  --chess-darkest: #1A1A1A;
-  --chess-sidebar: #1E1E1E;
-  --chess-panel: #242424;
-  --chess-text: #FFFFFF;
-  --chess-text-muted: #B0B0B0;
-  --chess-accent: #00E676;
-  --chess-red: #FF5252;
-  --chess-green: #00E676;
-  --chess-yellow: #FFC107;
-  --chess-orange: #FF9800;
-  --chess-purple: #9C27B0;
-  --chess-pink: #E91E63;
-  --chess-border: #3A3A3A;
-  --chess-hover: #3A3A3A;
-  --chess-selected: #404040;
+  --trading-darkest: #F8F8FC;
+  --trading-darker: #FFFFFF;
+  --trading-dark: #FFFFFF;
+  --trading-sidebar: #FFFFFF;
+  --trading-panel: #FFFFFF;
+  --trading-text: #1A1A1A;
+  --trading-text-muted: #6B7280;
+  --trading-accent: #4A2C8C;
+  --trading-red: #EF4444;
+  --trading-green: #10B981;
+  --trading-yellow: #F59E0B;
+  --trading-orange: #F97316;
+  --trading-purple: #8B5CF6;
+  --trading-pink: #EC4899;
+  --trading-border: #E5E7EB;
+  --trading-hover: #F3F4F6;
+  --trading-selected: #EDE9FE;
+  --chess-dark: #FFFFFF;
+  --chess-darker: #FFFFFF;
+  --chess-darkest: #F8F8FC;
+  --chess-sidebar: #FFFFFF;
+  --chess-panel: #FFFFFF;
+  --chess-text: #1A1A1A;
+  --chess-text-muted: #6B7280;
+  --chess-accent: #4A2C8C;
+  --chess-red: #EF4444;
+  --chess-green: #10B981;
+  --chess-yellow: #F59E0B;
+  --chess-orange: #F97316;
+  --chess-purple: #8B5CF6;
+  --chess-pink: #EC4899;
+  --chess-border: #E5E7EB;
+  --chess-hover: #F3F4F6;
+  --chess-selected: #EDE9FE;
 }
 
 body {
-  background-color: var(--trading-darkest);
-  color: var(--trading-text);
+  background-color: var(--enigma-bg);
+  color: var(--enigma-text);
   font-family: "Open Sans", sans-serif;
 }
 
