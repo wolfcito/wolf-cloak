@@ -15,10 +15,10 @@ const LoadingFallback = () => (
 export function App() {
 
 	return (
-		<div className="min-h-screen bg-enigma-bg flex flex-col">
+		<div className="min-h-screen flex flex-col">
 			<Header />
 			<div className="flex flex-1">
-				<main className="flex-1 bg-enigma-bg p-8">
+				<main className="flex-1 p-8">
 					<Suspense fallback={<LoadingFallback />}>
 						<EERC />
 					</Suspense>
