@@ -8,7 +8,8 @@ function corsHeaders() {
   return {
     'Access-Control-Allow-Origin': ALLOW_ORIGIN,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'content-type',
+    // Allow passing JSON and optional API key if ever used cross-origin
+    'Access-Control-Allow-Headers': 'content-type, x-api-key',
   };
 }
 
@@ -34,10 +35,16 @@ export default async function handler(req: Request): Promise<Response> {
     (process as any)?.env?.VITE_SUBGRAPH_URL ||
     'https://subgraph.satsuma-prod.com/mundovirtual--601218/wolf-cloak-fuji/version/v0.0.1/api';
 
+  const apiKey = process.env.SUBGRAPH_API_KEY || (process as any)?.env?.SUBGRAPH_API_KEY;
+
   try {
     const res = await fetch(target, {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: {
+        'content-type': 'application/json',
+        // If an API key is configured for the upstream, attach it.
+        ...(apiKey ? { 'x-api-key': apiKey } : {}),
+      },
       body: JSON.stringify(body),
     });
 
@@ -56,4 +63,3 @@ export default async function handler(req: Request): Promise<Response> {
     });
   }
 }
-
