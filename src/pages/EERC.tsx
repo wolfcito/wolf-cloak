@@ -15,7 +15,6 @@ import {
   useWalletClient,
 } from "wagmi";
 import { avalancheFuji } from "wagmi/chains";
-import { Divider } from "../components";
 import { ConverterMode } from "../components/eerc/ConverterMode";
 import { StandaloneMode } from "../components/eerc/StandaloneMode";
 import { useWebComponents } from "../components/web-components";
@@ -381,197 +380,238 @@ export function EERC() {
       });
 
   return (
-    <main className="max-w-6xl mx-auto px-4 py-8">
-      <div className="text-chess-text font-mono text-sm leading-relaxed mt-4">
-        <h2 className="text-chess-accent font-bold text-lg mb-2 text-center flex items-center justify-center gap-2">
-          wolf-cloak
-        </h2>
-      </div>
-  
+    <div className="max-w-7xl mx-auto">
+      {/* Main Dashboard Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+        {/* Contracts Card */}
+        <div className="lg:col-span-3">
+          <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-trading-text font-bold text-lg">📜 Contracts - Avalanche Fuji Testnet</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
+                <div className="text-trading-accent font-semibold mb-2">eERC Native</div>
+                <div className="text-trading-text-muted text-sm break-all mb-2">
+                  {CONTRACTS.EERC_STANDALONE}
+                </div>
+                <a
+                  href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_STANDALONE}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                >
+                  See on Explorer →
+                </a>
+              </div>
 
-      {/* Contracts */}
-      <div className="border border-chess-border rounded-md p-4 font-mono text-sm bg-chess-darker">
-        <div className="text-chess-accent font-bold mb-2">📜 Contracts - Avalanche Fuji Testnet</div>
-        <div className="grid grid-cols-[160px_1fr] gap-y-3 gap-x-4 items-center">
-          <div className="text-chess-accent">eERC Native</div>
-          <div className="text-chess-text-muted break-all">
-            <div>{CONTRACTS.EERC_STANDALONE}</div>
-            <a
-              href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_STANDALONE}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-chess-text-muted underline hover:text-chess-accent"
-            >
-              See on Explorer →
-            </a>
-          </div>
+              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
+                <div className="text-trading-accent font-semibold mb-2">eERC Wrapper</div>
+                <div className="text-trading-text-muted text-sm break-all mb-2">
+                  {CONTRACTS.EERC_CONVERTER}
+                </div>
+                <a
+                  href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_CONVERTER}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                >
+                  See on Explorer →
+                </a>
+              </div>
 
-          <div className="text-chess-accent">eERC Wrapper</div>
-          <div className="text-chess-text-muted break-all">
-            <div>{CONTRACTS.EERC_CONVERTER}</div>
-            <a
-              href={`${EXPLORER_BASE_URL}${CONTRACTS.EERC_CONVERTER}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-chess-text-muted underline hover:text-chess-accent"
-            >
-              See on Explorer →
-            </a>
-          </div>
-
-          <div className="text-chess-accent">Test ERC-20</div>
-          <div className="text-chess-text-muted break-all">
-            <div>{CONTRACTS.ERC20}</div>
-            <a
-              href={`${EXPLORER_BASE_URL}${CONTRACTS.ERC20}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-chess-text-muted underline hover:text-chess-accent"
-            >
-              See on Explorer →
-            </a>
+              <div className="bg-trading-dark border border-trading-border rounded-lg p-4">
+                <div className="text-trading-accent font-semibold mb-2">Test ERC-20</div>
+                <div className="text-trading-text-muted text-sm break-all mb-2">
+                  {CONTRACTS.ERC20}
+                </div>
+                <a
+                  href={`${EXPLORER_BASE_URL}${CONTRACTS.ERC20}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-xs text-trading-accent underline hover:text-trading-accent/80"
+                >
+                  See on Explorer →
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <Divider title="🔗 Connect Wallet" />
-      <button
-        type="button"
-        className="bg-chess-darker w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-hover transition-all duration-200 font-mono"
-        disabled={isConnected}
-        onClick={() => {
-          if (isConnected) {
-            console.log("Already connected");
-            return;
-          }
+      {/* Wallet Connection Card */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
+          <h3 className="text-trading-text font-bold text-lg mb-4">🔗 Wallet Connection</h3>
+          <div className="space-y-3">
+            <button
+              type="button"
+              className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+              disabled={isConnected}
+              onClick={() => {
+                if (isConnected) {
+                  console.log("Already connected");
+                  return;
+                }
 
-          open().then(() => {
-            console.log("Connected");
-          });
+                open().then(() => {
+                  console.log("Connected");
+                });
+              }}
+            >
+              {isConnected
+                ? `Connected as (${address})`
+                : isConnecting
+                ? "Connecting..."
+                : "Connect Wallet"}
+            </button>
 
-          //   connectAsync({ connector: injected });
-        }}
-      >
-        {isConnected
-          ? `Connected as (${address})`
-          : isConnecting
-          ? "Connecting..."
-          : "Connect Wallet"}
-      </button>
+            {isConnected && (
+              <button
+                type="button"
+                className="w-full bg-trading-dark text-trading-text px-4 py-3 rounded-lg font-medium border border-trading-border disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-hover transition-all duration-200"
+                disabled={!isConnected}
+                onClick={async () => {
+                  if (!isConnected) {
+                    console.log("Not connected");
+                    return;
+                  }
+                  disconnectAsync();
+                }}
+              >
+                Disconnect
+              </button>
+            )}
+          </div>
+        </div>
 
-      {isConnected && (
-        <button
-          type="button"
-          className="bg-chess-darker w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-hover transition-all duration-200 font-mono"
-          disabled={!isConnected}
-          onClick={async () => {
-            if (!isConnected) {
-              console.log("Not connected");
-              return;
-            }
-            disconnectAsync();
-          }}
-        >
-          Disconnect
-        </button>
-      )}
+        {/* Decryption Key Card */}
+        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
+          <h3 className="text-trading-text font-bold text-lg mb-4">🔑 Generate Decryption Key</h3>
+          <button
+            type="button"
+            className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+            disabled={isDecryptionKeySet}
+            onClick={async () => {
+              if (!isConnected) {
+                console.log("Not connected");
+                return;
+              }
 
-      <Divider title="🔑 Generate Decryption Key" />
-      <button
-        type="button"
-        className="bg-chess-darker w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-hover transition-all duration-200 font-mono"
-        disabled={isDecryptionKeySet}
-        onClick={async () => {
-          if (!isConnected) {
-            console.log("Not connected");
-            return;
-          }
+              generateDecryptionKey()
+                .then((key) => {
+                  setAuditorKey(key);
+                  try {
+                    (auditorHook as any)?.refresh?.();
+                  } catch {}
 
-          generateDecryptionKey()
-            .then((key) => {
-              setAuditorKey(key);
-              try {
-                (auditorHook as any)?.refresh?.();
-              } catch {}
-
-              toast.success("🔑 Decryption key generated!", {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-                transition: Bounce,
-              });
-            })
-            .catch((error) => {
-              toast.error("Error generating decryption key");
-              console.error(error);
-            });
-        }}
-      >
-        Generate Decryption Key
-      </button>
-
-      <Divider title="🧾 Registration" />
-
-      <div>
-        <button
-          type="button"
-          className="mt-2 bg-cloak-dark w-full text-chess-accent px-2 py-1 rounded-md text-sm border border-chess-border/60 disabled:opacity-50 disabled:cursor-not-allowed mb-2 hover:bg-chess-border/60 transition-all duration-200 font-mono"
-          disabled={isRegistered || isRegistering || !isDecryptionKeySet}
-          onClick={async () => {
-            setIsRegistering(true);
-            try {
-              const { transactionHash } = await register();
-              setTxHash(transactionHash as `0x${string}`);
-            } catch (error) {
-              console.error(error);
-              toast.error("Registration failed");
-              setIsRegistering(false);
-            }
-          }}
-        >
-          {isRegistered ? (
-            "✓ Registered"
-          ) : isRegistering ? (
-            <div className="flex flex-col items-center gap-1">
-              <span>Registering your wallet...</span>
-              {txHash && (
-                <span className="text-xs text-chess-text-muted">
-                  Transaction: {txHash.slice(0, 6)}...{txHash.slice(-4)}
-                </span>
-              )}
-            </div>
-          ) : (
-            "Register Wallet"
-          )}
-        </button>
+                  toast.success("🔑 Decryption key generated!", {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: false,
+                    draggable: true,
+                    progress: undefined,
+                    transition: Bounce,
+                  });
+                })
+                .catch((error) => {
+                  toast.error("Error generating decryption key");
+                  console.error(error);
+                });
+            }}
+          >
+            Generate Decryption Key
+          </button>
+        </div>
       </div>
 
-      <Divider title="📜 eERC Contract" my={2} />
+      {/* Registration Card */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
+          <h3 className="text-trading-text font-bold text-lg mb-4">🧾 Registration</h3>
+          <button
+            type="button"
+            className="w-full bg-trading-accent text-trading-darkest px-4 py-3 rounded-lg font-medium disabled:opacity-50 disabled:cursor-not-allowed hover:bg-trading-accent/90 transition-all duration-200"
+            disabled={isRegistered || isRegistering || !isDecryptionKeySet}
+            onClick={async () => {
+              setIsRegistering(true);
+              try {
+                const { transactionHash } = await register();
+                setTxHash(transactionHash as `0x${string}`);
+              } catch (error) {
+                console.error(error);
+                toast.error("Registration failed");
+                setIsRegistering(false);
+              }
+            }}
+          >
+            {isRegistered ? (
+              "✓ Registered"
+            ) : isRegistering ? (
+              <div className="flex flex-col items-center gap-1">
+                <span>Registering your wallet...</span>
+                {txHash && (
+                  <span className="text-xs text-trading-text-muted">
+                    Transaction: {txHash.slice(0, 6)}...{txHash.slice(-4)}
+                  </span>
+                )}
+              </div>
+            ) : (
+              "Register Wallet"
+            )}
+          </button>
+        </div>
 
-      {/* Transaction Pending Indicator - Enhanced Version */}
+        {/* Mode Selection Card */}
+        <div className="bg-trading-panel border border-trading-border rounded-lg p-6">
+          <h3 className="text-trading-text font-bold text-lg mb-4">📜 eERC Contract Mode</h3>
+          <div className="flex space-x-2">
+            <button
+              className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                mode === "standalone"
+                  ? "bg-trading-accent text-trading-darkest"
+                  : "bg-trading-dark text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+              }`}
+              onClick={() => setMode("standalone")}
+            >
+              Standalone Mode
+            </button>
+            <button
+              className={`flex-1 px-4 py-2 rounded-lg font-medium transition-all duration-200 ${
+                mode === "converter"
+                  ? "bg-trading-accent text-trading-darkest"
+                  : "bg-trading-dark text-trading-text-muted hover:text-trading-text hover:bg-trading-hover"
+              }`}
+              onClick={() => setMode("converter")}
+            >
+              Converter Mode
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Transaction Pending Indicator */}
       {isTransactionPending && (
-        <div className="border border-chess-border rounded-md p-4 font-mono text-sm mb-4 bg-chess-darker">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-chess-accent font-bold text-lg">
+        <div className="bg-trading-panel border border-trading-border rounded-lg p-6 mb-6">
+          <div className="flex flex-col items-center gap-4">
+            <div className="text-trading-accent font-bold text-xl">
               {transactionType} in progress...
             </div>
             {txHash && (
-              <div className="flex flex-col items-center p-3 rounded-md w-full">
-                <span className="text-chess-accent font-semibold mb-1">
+              <div className="flex flex-col items-center p-4 bg-trading-dark rounded-lg w-full">
+                <span className="text-trading-accent font-semibold mb-2">
                   Transaction Hash:
                 </span>
-                <span className="text-xs text-chess-text-muted font-mono p-2 rounded w-full text-center break-all">
+                <span className="text-sm text-trading-text-muted font-mono p-3 rounded w-full text-center break-all bg-trading-darker">
                   {txHash}
                 </span>
                 <a
                   href={`${EXPLORER_BASE_URL_TX}${txHash}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-xs text-chess-accent underline hover:text-chess-accent/80 mt-2 bg-chess-accent/10 px-3 py-1 rounded"
+                  className="text-sm text-trading-accent underline hover:text-trading-accent/80 mt-3 bg-trading-accent/10 px-4 py-2 rounded-lg"
                 >
                   View on Explorer →
                 </a>
@@ -580,28 +620,6 @@ export function EERC() {
           </div>
         </div>
       )}
-
-      <div className="flex items-center space-x-4 font-mono text-sm text-chess-text justify-center my-3">
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <span
-          className={`cursor-pointer ${
-            mode === "standalone" ? "text-chess-accent font-bold" : "opacity-50"
-          }`}
-          onClick={() => setMode("standalone")}
-        >
-          Standalone Mode
-        </span>
-        <span className="text-chess-text-muted">|</span>
-        {/* biome-ignore lint/a11y/useKeyWithClickEvents: <explanation> */}
-        <span
-          className={`cursor-pointer ${
-            mode === "converter" ? "text-chess-accent font-bold" : "opacity-50"
-          }`}
-          onClick={() => setMode("converter")}
-        >
-          Converter Mode
-        </span>
-      </div>
       
 
       {mode === "standalone" ? (
@@ -668,17 +686,20 @@ export function EERC() {
         explorerBaseTx={EXPLORER_BASE_URL_TX}
       />
 
-        <p className="text-xs text-chess-text-muted mt-0">
+      {/* Footer */}
+      <div className="mt-8 text-center">
+        <p className="text-sm text-trading-text-muted">
           Want to learn more? See the full documentation on our{" "}
           <a
             href="https://docs.avacloud.io/encrypted-erc"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline hover:text-chess-accent"
+            className="underline hover:text-trading-accent transition-colors"
           >
             GitBook →
           </a>
         </p>
-    </main>
+      </div>
+    </div>
   );
 }
