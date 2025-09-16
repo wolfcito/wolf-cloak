@@ -49,7 +49,9 @@ export function useGql<T = any>(params: {
   skip?: boolean;
 }) {
   const { query, variables = {}, skip = false } = params;
-  const url = (import.meta.env.VITE_SUBGRAPH_URL as string) || "";
+  const useProxy = (import.meta.env.VITE_SUBGRAPH_PROXY as string) === "true";
+  const baseUrl = (import.meta.env.VITE_SUBGRAPH_URL as string) || "";
+  const url = useProxy ? "/api/subgraph" : baseUrl;
 
   const [data, setData] = useState<T | null>(null);
   const [loading, setLoading] = useState(false);
