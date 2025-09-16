@@ -36,6 +36,7 @@ export default async function handler(req: Request): Promise<Response> {
     'https://subgraph.satsuma-prod.com/mundovirtual--601218/wolf-cloak-fuji/version/v0.0.1/api';
 
   const apiKey = process.env.SUBGRAPH_API_KEY || (process as any)?.env?.SUBGRAPH_API_KEY;
+  const bearer = process.env.SUBGRAPH_BEARER_TOKEN || (process as any)?.env?.SUBGRAPH_BEARER_TOKEN;
 
   try {
     const res = await fetch(target, {
@@ -44,6 +45,7 @@ export default async function handler(req: Request): Promise<Response> {
         'content-type': 'application/json',
         // If an API key is configured for the upstream, attach it.
         ...(apiKey ? { 'x-api-key': apiKey } : {}),
+        ...(bearer ? { authorization: `Bearer ${bearer}` } : {}),
       },
       body: JSON.stringify(body),
     });
